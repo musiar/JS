@@ -1,0 +1,31 @@
+div
+	{
+		background-color: #E1FFEA;
+		border: solid 2px #245A34;
+		border-radius: 10px;
+		margin: 10px;
+		padding: 10px;
+	}
+h1
+	{
+		text-align: center;
+		color: #245A34;
+	}
+.no
+	{
+		color: red;
+		font-weight: bolder;
+	}
+/*УДАЛИТЬ СТРЕЛКИ ДЛЯ INPUT*/
+/* Для Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+/* Для Firefox */
+input[type=number]{
+  -moz-appearance: textfield;
+}

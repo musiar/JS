@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Строковые функции</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src='http://code.jquery.com/jquery-1.7.1.js'></script>
+		<script src ="js/script_6.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Работа с регистром символов</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'js'. Сделайте из нее строку 'JS'.
+		        </p>
+		        <p id = "r1"></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'JS'. Сделайте из нее строку 'js'.
+		        </p>
+		        <p id = "r2"></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Работа с length, substr, substring, slice. Работа с indexOf</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'я учу javascript!'. Найдите количество символов в этой строке.
+		        </p>
+		        <p id = "r3"></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'я учу javascript!'. Вырежите из нее слово 'учу' и слово 'javascript' тремя разными способами (через substr, substring, slice). 
+		        </p>
+		        <p id = "r4"></p>
+		        <button onclick = "f4_1();">Выполнить (substr)</button>
+		        <button onclick = "f4_2();">Выполнить (substring)</button>
+		        <button onclick = "f4_3();">Выполнить (slice)</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'я учу javascript!'. Найдите позицию подстроки 'учу' 
+		        </p>
+		        <p id = "r5"></p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана переменная str, в которой хранится какой-либо текст. Реализуйте обрезание длинного текста по следующему принципу: если количество символов этого текста больше заданного в переменной n, то в переменную result запишем первые n символов строки str и добавим в конец троеточие '...'. В противном случае в переменную result запишем содержимое переменной str. 
+		        </p>
+		        Введите текст: <input type = "text" placeholder = "Введите текст" id = "f6_txt">
+		        <br>
+		        Введите число: <input type = "number" placeholder = "Введите число" id = "f6_num">
+		        <p id = "r6"></p>
+		        <button onclick = "f6();">Выполнить</button>
+		        <button onclick = "f6_clear();">Очистить</button>
+		    </div>
+		    
+		    <h1>Работа с replace</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'Я-учу-javascript!'. Замените все дефисы на '!' с помощью глобального поиска и замены. 
+		        </p>
+		        <p id = "r7"></p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Работа с split</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'я учу javascript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива. 
+		        </p>
+		        <p id = "r8"></p>
+		        <button onclick = "f8();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'я учу javascript!'. С помощью метода split запишите каждый символ этой строки в отдельный элемент массива. 
+		        </p>
+		        <p id = "r9"></p>
+		        <button onclick = "f9();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31.12.2025'. 
+		        </p>
+		        <p id = "r10"></p>
+		        <button onclick = "f10();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Работа с join</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'. 
+		        </p>
+		        <p id = "r11"></p>
+		        <button onclick = "f11();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Задачи</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Преобразуйте первую букву строки в верхний регистр. 
+		        </p>
+		        <input type = "text" placeholder = "Введите текст" id = "f12_str">
+		        <p id = "r12"></p>
+		        <button onclick = "f12();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Преобразуйте первую букву каждого слова строки в верхний регистр.
+		        </p>
+		        <input type = "text" placeholder = "Введите текст" id = "f13_str">
+		        <p id = "r13"></p>
+		        <button onclick = "f13();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Преобразуйте строку 'var_test_text' в 'varTestText'. Скрипт, конечно же, должен работать с любыми аналогичными строками.
+		        </p>
+		        <input type = "text" placeholder = "Введите текст" id = "f14_str">
+		        <p id = "r14"></p>
+		        <button onclick = "f14();">Выполнить</button>
+		    </div>
+		</div>				
+	</body>
+</html>
