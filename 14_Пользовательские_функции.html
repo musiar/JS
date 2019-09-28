@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Пользовательские функции</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_14.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+    <h1>Использование пользовательских функций</h1>
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10. Если это так - пусть функция возвращает true, если не так - false.
+        </p>
+        <input type = "number" id = "f1_num">
+        <p id = "r1"></p>
+        <button onclick = "f1();">Выполнить</button>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти. Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
+        </p>
+        <p id = "r2"></p>
+        <button onclick = "f2();">Выполнить</button>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+        </p>
+         <input type = "number" id = "f3_num">
+        <p id = "r3"></p>
+        <button onclick = "f3();">Выполнить</button>
+    </div>
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Найдите все года от 1 до 2019, сумма цифр которых равна 13. Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
+        </p>
+        <p id = "r4"></p>
+        <button onclick = "f4();">Выполнить</button>
+    </div>
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
+        </p>
+        <input type = "number" id = "f5_num">
+        <p id = "r5"></p>
+        <button onclick = "f5();">Выполнить</button>
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+        </p>
+        <p id = "r6"></p>
+        <button onclick = "f6();">Выполнить</button>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число).
+        </p>
+        <input type = "number" id = "f7_num">
+        <p id = "r7"></p>
+        <button onclick = "f7();">Выполнить</button>
+    </div>
+    
+</div>
+	</body>
+</html>

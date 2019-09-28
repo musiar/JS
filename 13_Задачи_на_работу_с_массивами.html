@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Задачи на работу с массивами</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_13.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Заполнение массивов</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
+		        </p>
+		        <p id = "r1"></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
+		        </p>
+		        <p id = "r2"></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. Первым параметром функция принимает значение, которым заполнять массив, а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
+		        </p>
+		        Символ: <input type = "text" id = "f3_txt">
+		        <br>
+		        Количество: <input type = "number" min = "1" id = "f3_num">
+		        <p id = "r3"></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+		        </p>
+		        <p id = "r4"></p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+
+		    <h1>Переворот массива</h1>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+		        </p>
+		        <p id = "r5"></p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+
+		    <h1>Многомерные массивы</h1>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан двухмерный массив с числами, например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+		        </p>
+		        <p id = "r6"></p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан трехмерный массив с числами, например [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+		        </p>
+		        <p id = "r7"></p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+		    
+		</div>
+	</body>
+</html>
