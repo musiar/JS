@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Практика на комбинации стандартных функций JavaScript</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_8.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+			<h1>Практика на комбинации стандартных функций JavaScript</h1>
+			<div class = "item">
+		    	<p>
+					<span class = "num"></span>
+					Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения
+				</p>
+				<input type = "text" placeholder = "Введите текст" id = "f1_txt">
+				<p id = "r1"></p>
+				<button onclick = "f1_1();">Выполнить 1</button>
+				<button onclick = "f1_2();">Выполнить 2</button>
+			</div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') не используя цикл.
+		        </p>
+		       
+		        <p id = "r2"></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Проверьте, что строка начинается на "http://".
+		        </p>
+		        <input type = "text" placeholder = "Введите текст" id = "f3_txt">
+		        <p id = "r3"></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Проверьте, что строка заканчивается на ".html".
+		        </p>
+		        <input type = "text" placeholder = "Введите текст" id = "f4_txt">
+		        <p id = "r4"></p>
+		        <button onclick = "f4();">Выполнить</button>
+		        
+		    </div>
+		</div>
+	</body>
+</html>
