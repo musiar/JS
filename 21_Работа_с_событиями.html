@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Работа с событиями</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_21.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>На elem.onclick</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны картинки. Привяжите к каждой картинке событие, чтобы по клику на картинку выводился ее src.
+		        </p>
+		        <p>
+		            <img src = "https://irecommend.img.c3.r-99.com/sites/default/files/imagecache/60i/pictures/12/picture-1274009-UDkZ2hAI.jpg" alt = "фото">
+		            <img src = "http://img4.imgbb.ru/0/8/9/089077b6c3616b5941619915cefc5076.jpg" alt = "фото">
+		            <img src = "https://irecommend.img.c3.r-99.com/sites/default/files/imagecache/60i/pictures/10/picture-1014612-WU037hfs.jpg" alt = "фото">
+		            <img src = "https://memegenerator.net/img/cache/images/folder267/60x60/71577267.jpg" alt = "фото">
+		            <img src = "https://cdn2.scratch.mit.edu/get_image/user/39332939_60x60.png" alt = "фото">
+		            <img src = "https://cdn2.scratch.mit.edu/get_image/user/41599514_60x60.png" alt = "фото">
+		        </p>
+		        <p id = "r1"></p>
+		    </div>
+		    
+		    
+		    <h1>На addEventListener, removeEventListener</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст.
+		        </p>
+		        <p>
+		            <a href = "https://vk.com" target = "blank">Вконтакте</a>
+		            <br>
+		            <a href = "https://yandex.ru/" target = "blank">Яндекс</a>
+		            <br>
+		            <a href = "https://www.tutu.ru/" target = "blank">Туту</a>
+		            <br>
+		            <a href = "https://ok.ru/" target = "blank">Одноклассники</a>
+		        </p>
+		    </div>
+		    
+
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках.
+		            <b>Готово.</b>
+		        </p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дополните предыдущую задачу: после первого наведению на ссылку следует отвязать от нее событие, которое добавляет href в конец текста. 
+		            <b>Готово.</b>
+		        </p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Привяжите всем инпутам следующее событие - по потери фокуса каждый инпут выводит свое value в абзац с id="r5".
+		        </p>
+		        <input type = "text" class = "f5_txt">
+		        <br>
+		        <input type = "text" class = "f5_txt">
+		        <br>
+		        <input type = "text" class = "f5_txt">
+		        <p id = "r5"></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Для всех инпутов сделайте так, чтобы они выводили свой value при нажатии на любой из них, но только по первому нажатию. Повторное нажатие на инпут не должно вызывать реакции.
+		        </p>
+		        <input type = "text" class = "f6_txt" value = "тюленики">
+		        <br>
+		        <input type = "text" class = "f6_txt" value = "собаки">
+		        <br>
+		        <input type = "text" class = "f6_txt" value = "котики">
+		        <p id = "r6"></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит.
+		        </p>
+		        <p class = "num7">2</p>
+		        <p class = "num7">3</p>
+		        <p class = "num7">4</p>
+		        <p class = "num7">5</p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны инпуты. Сделайте так, чтобы все инпуты по потери фокуса проверяли свое содержимое на правильное количество символов. Сколько символов должно быть в инпуте, указывается в атрибуте data-length. Если вбито правильное количество, то граница инпута становится зеленой, если неправильное - красной.
+		        </p>
+		        <input type = "text" data-length = "4" placeholder = "4 символа" class = "f8_txt">
+		        <input type = "text" data-length = "5" placeholder = "5 символов" class = "f8_txt">
+		        <input type = "text" data-length = "11" placeholder = "11 символов" class = "f8_txt">
+		        <input type = "text" data-length = "2" placeholder = "2 символа" class = "f8_txt">
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны дивы. По первому нажатию на каждый див он красится красным фоном, по второму красится обратно и так далее каждый клик происходит чередование фона. Сделайте так, чтобы было две функции: одна красит в красный цвет, другая в зеленый и они сменяли друг друга через removeEventListener.
+		        </p>
+		        <p class = "r9">1</p>
+		        <p class = "r9">2</p>
+		        <p class = "r9">3</p>
+		        <p class = "r9">4</p>
+		        <p class = "r9">5</p>
+		    </div>
+		</div>
+	</body>
+</html>

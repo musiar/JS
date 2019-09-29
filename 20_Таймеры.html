@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Работа с таймерами</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_20.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Задачи на работу с таймерами в JavaScript</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте отсчет от 0 до бесконечности.
+		        </p>
+		        <p id = "r1" class = "res">0</p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте отсчет с кнопкой остановки.
+		        </p>
+		        <p id = "r2" class = "res">0</p>
+		        <button onclick = "f2();">Запустить</button>
+		        <button onclick = "f2_stop();">Остановить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте тикающие часики.
+		        </p>
+		        <p id = "r3" class = "res"></p>
+		        <button onclick = "f3();">Запустить часы</button>
+		        <button onclick = "f3_stop();">Остановить часы</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте таймер обратного отсчета
+		        </p>
+		        <p id = "r4" class = "res">10</p>
+		        <button onclick = "f4();">Выполнить</button>
+		        
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте простой слайдер.
+		        </p>
+		        <p class = "res">
+		            <img id = "r5" src = "https://s.tcdn.co/243/0c0/2430c0c2-8e12-3166-a4de-7c27415d2626/29.png" alt = "Тут будет фото">
+		        </p>
+		        <button onclick = "f5();">Запустить</button>
+		        <button onclick = "f5_stop();">Стоп</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте карусель
+		        </p>
+		        <p class = "res">
+		            <img class = "f6_img">
+		            <img class = "f6_img">
+		            <img class = "f6_img">
+		            <img class = "f6_img">
+		            <img class = "f6_img">
+		            <img class = "f6_img">
+		            <img class = "f6_img">
+		            <img class = "f6_img">
+		        </p>
+		        <button onclick = "f6();">Запустить карусель</button>
+		        <button onclick = "f6_stop();">Остановить карусель</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте отсчет до полуночи.
+		        </p>
+		        <table class = "res">
+		            <tr>
+		                <th>Часы</th>
+		                <th>Минуты</th>
+		                <th>Секунды</th>
+		            </tr>
+		            <tr>
+		                <td id = "f7_h"></td>
+		                <td id = "f7_m"></td>
+		                <td id = "f7_s"></td>
+		            </tr>
+		        </table>
+		        <button onclick = "f7();">Выполнить</button>
+		        <button onclick = "f7_stop();">Стоп</button>
+		    </div>
+		</div>
+	</body>
+</html>

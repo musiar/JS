@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Практика на работу с пользовательскими функциями</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_15.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Использование пользовательских функций</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+		        </p>
+		        <input type = "text" id = "f1_txt">
+		        <p id = "r1"></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+		        </p>
+		        <p id = "r2"></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. Функция должна возвращать true или false.
+		        </p>
+		        Массив: <span id = "f3_arr"></span>
+		        <br>
+		        Что искать: <input type = "text" id = "f3_txt">
+		        <p id = "r3"></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка, например, '123456'. Сделайте из нее '214365'.
+		        </p>
+		        Введите строку: <input type = "text" id = "f4_txt">
+		        <p id = "r4"></p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+
+		    <h1>Работа с рекурсией</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл<br>
+		            Вывод осуществляется в консоль.
+		        </p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
+		        </p>
+		        <input type = "number" id = "f6_num">
+		        <p id = "r6"></p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		</div>
+	</body>
+</html>

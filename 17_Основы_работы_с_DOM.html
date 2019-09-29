@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Основы работы с DOM</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_17.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>События через атрибуты</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            alert при нажатии на кнопку
+		        </p>
+		        <button onclick = "f1();">Нажми на меня</button> 
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            alert при наведении на кнопку
+		        </p>
+		        <button onmouseover = "f1();">Наведи на меня курсор</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            alert при двойном нажатии на кнопку
+		        </p>
+		        <button ondblclick = "f1();">Нажми на меня 2 раза</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            alert при наведении мыши на элемент
+		        </p>
+		        <div class = "border" onmouseout = "f1();">
+		            Наведи на меня мышь - а потом убери!
+		        </div>
+		    </div>
+		 
+		    <h1>Метод getElementById и работа с атрибутами</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            alert содержимого input
+		        </p>
+		        <input type = "text" placeholder = "Введите текст" id = "f5_txt">
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Изменить содержание input
+		        </p>
+		        <input type = "text" placeholder = "Введите текст" id = "f6_txt">
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять картинку по нажатию на кнопку.
+		        </p>
+		        <img src = "http://1.bp.blogspot.com/-6x58hMF7IG4/T9oiqgfu36I/AAAAAAAAARA/DtoWan191tY/s320/elephant-seals-eastcott_3718_990x742.jpg" id = "f9_img">
+		        <br>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+
+		    <h1>Работа с this</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Вывод текста в консоль при фокусе элемента
+		        </p>
+		        <input type = "text" onfocus = "f8(this);" value ="Нажми на меня и загляни в консоль">
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять текст input при фокусе элемента
+		        </p>
+		        <input type = "text" onfocus = "f9(this);" value ="Нажми на меня">
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять текст input при фокусе элемента и после расфокусировки элемента
+		        </p>
+		        <input type = "text" onfocus = "f9(this);" onblur = "f10(this);" value ="Нажми на меня">
+		    </div>
+
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Заблокировать кнопку после первого нажатия
+		        </p>
+		        <button onclick = "f11(this);">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Изменить текст кнопки при нажатии
+		        </p>
+		        <button onclick = "f12(this);">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять картинку при наведении
+		        </p>
+		        <img src = "http://1.bp.blogspot.com/-6x58hMF7IG4/T9oiqgfu36I/AAAAAAAAARA/DtoWan191tY/s320/elephant-seals-eastcott_3718_990x742.jpg" onmouseover = "f13_1(this);" onmouseout = "f13_2(this);">
+		    </div>
+
+		    <h1>Работа с CSS</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять цвет текста input при нажатии на кнопку
+		        </p>
+		        <input type = "text" id = "f14_txt" value = "Это текст">
+		        <br>
+		        <button onclick = "f14();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Скрыть и показать элемент при нажатии на кнопку
+		        </p>
+		        <input type = "text" id = "f15_txt" value = "Этот элемент">
+		        <br>
+		        <button onclick = "f15_1();">Скрыть</button>
+		        <button onclick = "f15_2();">Показать</button>
+		    </div>    
+		 
+		 
+		     <h1>Задачи</h1>
+		     
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять текст и стиль элемента
+		        </p>
+		        <input type = "text" id = "f16_txt" value = "Этот элемент">
+		        <br>
+		        <button onclick = "f16();">Выполнить</button>
+		    </div>   
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Заблокировать кнопку после первого нажатия, вывести вторую кнопку, которая разблокирует первую. 
+		        </p>
+		        <input type = "button" onclick = "f17_1(this);" value = "Заблокировать" id = "f17_btn1">
+		        <input type = "button" onclick = "f17_2(this);"  value = "Разблокировать" id = "f17_btn2" style = "display: none;">
+		    </div>    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Считать нажатия на кнопку
+		        </p>
+		        <button onclick = "f18();" id = "f18_cnt">0</button>
+		    </div> 
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поместить input справа.
+		        </p>
+		        <div>
+		            <input type = "text" id = "f19_txt" value = "Текст">
+		            <br>
+		            <button onclick = "f19();">Выполнить</button>
+		        </div>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Показать, какие классы есть у input
+		        </p>
+		        <input type = "text" id = "f20_txt" class = "test1 test2 test3" value = "Текст">
+		        <br>
+		        <button onclick = "f20();">Выполнить</button>
+		    </div>
+		 
+		    <h1>Закрепление пройденного</h1>
+		 
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять содержимое input-ов местами
+		        </p>
+		         <input type = "text" id = "f21_txt1" value = "Привет">
+		         <input type = "text" id = "f21_txt2" value = "Пока">
+		        <button onclick = "f21();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            По нажатию на кнопку во втором инпуте появится квадрат числа из первого инпута.
+		        </p>
+		        <input type = "number" id = "f22_num1">
+		        <input type = "number" id = "f22_num2" value = "Квадрат числа" disabled>
+		        <button onclick = "f22();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            По нажатию на кнопку во втором инпуте появится квадрат числа из первого инпута. Если введено не число - должна показаться ошибка.
+		        </p>
+		        <input type = "text" id = "f23_num1" placeholder = "Введите число">
+		        <input type = "text" id = "f23_num2" value = "Квадрат числа" disabled>
+		        <button onclick = "f23();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделать кнопку неактивной и изменить вид курсора после нажатия.
+		        </p>
+		        <button onclick = "f24();" id = "f24_btn">Выполнить</button>
+		    </div>
+		     
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Добавление символов в input
+		        </p>
+		        <input type = "text" disabled id = "f25_txt">
+		        <br>
+		        <button onclick = "f25('+');">+</button>
+		        <button onclick = "f25('-');">-</button>
+		        <button onclick = "f25('*');">*</button>
+		        <button onclick = "f25('/');">/</button>
+		        <br>
+		        <button onclick = "f25('1');">1</button>
+		        <button onclick = "f25('2');">2</button>
+		        <button onclick = "f25('3');">3</button>
+		        <br>
+		        <button onclick = "f25('4');">4</button>
+		        <button onclick = "f25('5');">5</button>
+		        <button onclick = "f25('6');">6</button>
+		        <br>
+		        <button onclick = "f25('7');">7</button>
+		        <button onclick = "f25('8');">8</button>
+		        <button onclick = "f25('9');">9</button>
+		        <br>
+		        <button onclick = "f25('0');">0</button>
+		        <br><br>
+		        <button onclick = "f25_clear();">Очистить</button>
+		    </div>   
+		</div>
+	</body>
+</html>

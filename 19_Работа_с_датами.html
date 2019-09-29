@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Работа с датами</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_19.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Работа с new Date</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран текущий день.
+		        </p>
+		        <p id = "r1"></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран текущий месяц.
+		        </p>
+		        <p id = "r2"></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран текущий год.
+		        </p>
+		        <p id = "r3"></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран текущую дату-время в формате '12:59:59 31.12.2014'. Для решения этой задачи напишите функцию, которая будет добавлять 0 перед днями и месяцами, которые состоят из одной цифры (из 1.9.2014 сделает 01.09.2014).
+		        </p>
+		        <p id = "r4"></p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+
+		    <h1>Работа с getDay</h1>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран номер текущего дня недели.
+		        </p>
+		        <p id = "r5"></p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран текущий день недели (словом, по-русски).
+		        </p>
+		        <p id = "r6"></p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Узнайте, какой день был 7-го января 2015 года.
+		        </p>
+		        <p id = "r7"></p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Работа с getTime</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран количество минут с 1-го января 1970 года до настоящего момента времени.
+		        </p>
+		        <p id = "r8"></p>
+		        <button onclick = "f8();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Работа с Date.parse</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		           Выведите на экран количество часов, прошедшее между 1 марта 1988 года и текущим моментом с помощью Date.parse. 
+		        </p>
+		        <p id = "r9"></p>
+		        <button onclick = "f9();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Разность между датами</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран количество секунд с начала дня до настоящего момента времени.
+		        </p>
+		        <p id = "r10"></p>
+		        <button onclick = "f10();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Задачи</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Выведите на экран количество секунд, которое осталось до конца дня.
+		        </p>
+		        <p id = "r11"></p>
+		        <button onclick = "f11();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте инпут, в который пользователь вводит дату своего рождения в формате '2014-12-31' (с конкретным годом). По потери фокуса выведите под инпутом сколько дней осталось до его дня рождения. Воспользуйтесь методом Date.parse.
+		        </p>
+		        <input type = "date" ID = "f12_dt">
+		        <p id = "r12"></p>
+		        <button onclick = "f12();">Выполнить</button>
+		    </div>
+		    
+		</div>
+	</body>
+</html>

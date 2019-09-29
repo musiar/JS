@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Футбольное поле</title>
+		<meta charset = "UTF-8">
+		<style type="text/css">
+			h1
+				{
+					text-align: center;
+				}
+			#field
+				{
+					margin-left: auto;
+					margin-right: auto;
+					width: 800px;
+					height: 600px;
+					background-color: #B0E99A;
+					border-radius: 10px;
+					position: relative;
+					top: 0px;
+					left: 0px;
+				}
+			#ball
+				{
+					width: 100px;
+					height: 100px;
+					background-color: #3DB5B7;
+					border-radius: 50%;
+					position: absolute;
+					top: 5px;
+					left: 4px;
+					transition: top 2s, left 2s;
+				}
+		</style>
+
+		<script>
+			
+			window.addEventListener('load', function() {
+				var f = document.getElementById('field')
+				f.addEventListener('click',
+					function(evt)
+						{
+							//console.log(evt.offsetX + ' ' + evt.offsetY);
+							var b = document.getElementById('ball');
+							b.style.top = (evt.offsetY - b.offsetHeight/2) + 'px';
+							b.style.left = (evt.offsetX - b.offsetWidth/2) + 'px';
+						})}
+				)
+		</script>			
+	</head>
+
+	<body>
+		<h1>Катаем мяч</h1>
+		<div id = "field">
+			<div id = "ball"></div>
+		</div>
+	</body>
+</html>

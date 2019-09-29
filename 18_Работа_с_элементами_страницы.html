@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Задачи на работу с элементами страницы</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_18.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Свойства innerHTML, outerHTML</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять текст абзаца при нажатии на кнопку
+		        </p>
+		        <p id = "f1_txt">Поменять этот текст.</p>
+		        <button onclick = "f1();">Выполнить</button> 
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять текст абзаца и сменить тэг на h3
+		        </p>
+		        <p id = "f2_txt">Поменять этот текст.</p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять тэг абзаца на h3, но оставить текст.
+		        </p>
+		         <p id = "f3_txt">Поменять этот абзац.</p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Посчитать сумму и вывести результат
+		        </p>
+		        <input type = "number" id = "f4_num1">
+		        +
+		        <input type = "number" id = "f4_num2">
+		        =
+		        <span id = "f4_res">?</span>
+		        <br>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+		 
+		    <h1>Метод getElementsByTagName</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять текст всех элементов
+		        </p>
+		        <em>Тут текст</em>
+		        <br>
+		        <em>Тут текст</em>
+		        <br>
+		        <em>Тут текст</em>
+		        <br>
+		        <em>Тут текст</em>
+		        <br>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Метод getElementsByClassName</h1>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан HTML код (см. под задачей). Поменяйте содержимое элементов с классом www на их порядковый номер в коде.
+		        </p>
+		        <h3 class="www">Заголовок с классом www.</h3>
+		        <p class="www">Абзац с классом www.</p>
+		        <p class="www">Абзац с классом www.</p>
+		        <p class="www">Абзац с классом www.</p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+
+		    <h1>Метод querySelectorAll</h1> 
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан HTML код (см. под задачей). Поменять содержимое <b>абзацев</b> с классом ppp на их порядковый номер в коде.
+		        </p>
+		        <h3 class="ppp">Заголовок с классом ppp, не поменяется.</h3>
+		        <p class="ppp">Абзац с классом ppp.</p>
+		        <p class="ppp">Абзац с классом ppp.</p>
+		        <p class="ppp">Абзац с классом ppp.</p>
+		        <p>Просто абзац, не поменяется.</p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+
+		    <h1>Методы setAttribute, getAttribute, removeAttribute, hasAttribute</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Вывести классы абзаца
+		        </p>
+		        <p class="my-class" id = "f8_p">Абзац с class="my-class".</p>
+		        <button onclick = "f8();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Вывести класс абзаца, сделать функцию, которая его удаляет
+		        </p>
+		        <p class = "my-class" id = "f9_p">Абзац с class="my-class".</p>
+		        <button onclick = "f9();">Показать класс</button>
+		        <br>
+		        <button onclick = "f9_remove();">Удалить класс</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Вывести класс абзаца, сделать функцию, которая его заменяет
+		        </p>
+		       <p class = "my-class" id = "f10_p">Абзац с class="my-class".</p>
+		        <button onclick = "f10();">Показать класс</button>
+		        <br>
+		        <button onclick = "f10_replace();">Заменить класс</button>
+		    </div>
+
+		    <h1>Задачи</h1> 
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Отображать текст из инпута в абзаце при вводе
+		        </p>
+		        <input onkeyup= "f11(this);" placeholder = "Введите текст">
+		        <p id = "f11_txt">Тут будет текст</p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Показать адрес ссылок при нажатии на кнопку
+		        </p>
+		        <a href = "https://ya.ru/" target = "blank" class = "a">Ссылка 1</a>
+		        <br>
+		        <a href = "https://vk.com/" target = "blank" class = "a">Ссылка 2</a>
+		        <br>
+		        <a href = "https://www.google.com/" target = "blank" class = "a">Ссылка 3</a>
+		        <br>
+		        <button onclick = "f12(this);">Выполнить</button>
+		    </div>
+		  
+		    <h1>Закрепление пройденного</h1> 
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            При нажатии на кнопку сменить текст и класс абзаца, заблокировать кнопку для нажатия.
+		        </p>
+		        <p id = "f13_p">Этот текст будет меняться</p>
+		        <button onclick = "f13(this);">Выполнить</button>
+		    </div>
+		    
+		    
+		      
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            При нажатии на кнопку текст в каждом абзаце поменяется на порядковый номер абзаца
+		        </p>
+		        <p class = "f14">Это абзац</p>
+		        <p class = "f14">Это абзац</p>
+		        <p class = "f14">Это абзац</p>
+		        <p class = "f14">Это абзац</p>
+		        <p class = "f14">Это абзац</p>
+		        <button onclick = "f14();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            При нажатии на кнопку текст в каждом абзаце поменяется - спереди добавится порядковый номер абзаца
+		        </p>
+		        <p class = "f15">Это абзац</p>
+		        <p class = "f15">Это абзац</p>
+		        <p class = "f15">Это абзац</p>
+		        <p class = "f15">Это абзац</p>
+		        <button onclick = "f15();">Выполнить</button>
+		    </div>    
+		</div>
+	</body>
+</html>
