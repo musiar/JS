@@ -1,9 +1,3 @@
-$(function ()
-    {
-        var nums = document.getElementsByClassName('num');
-            for(var i in nums)
-                nums[i].innerHTML = (parseInt(i) + 1) + ')';
-    });
 function f1()
     {
         var el = document.getElementById('elem'),
