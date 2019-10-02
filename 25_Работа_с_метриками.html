@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Работа с метриками</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_25.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Величина границы</h1>
+		    
+		    <div class = "div_elem item">
+		        <p id = "elem" class = "aaa ppp www" ondblclick = "f22(this);">Это элемент #elem</p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		           	Дан элемент #elem с границами. По нажатию на кнопку выведите толщину его верхней границы.
+		        </p>
+		        <p id = "r1"></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem с границами. По нажатию на кнопку выведите толщину его левой границы.
+		        </p>
+		        <p id = "r2"></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+
+		    <h1>Полный размер элемента</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem с границами. По нажатию на кнопку выведите его полную ширину с учетом границы и padding.
+		        </p>
+		        <p id = "r3"></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem с границами. По нажатию на кнопку выведите его полную высоту с учетом границы и padding.
+		        </p>
+		        <p id = "r4"></p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+
+		    <h1>Размер элемента без границ, но с padding</h1>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem с границами. По нажатию на кнопку выведите его полную ширину без учета границы, но с padding.
+		        </p>
+		        <p id = "r5"></p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem с границами. По нажатию на кнопку выведите его полную высоту без учета границы, но с padding.
+		        </p>
+		        <p id = "r6"></p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Работа с getComputedStyle</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem. Получите его ширину и высоту, без учета границы и padding.
+		        </p>
+		        <p id = "r7"></p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Прокрутка элемента (scrollTop, scrollLeft)</h1>
+		    
+		    <div class = "div_elem item">
+		        <p id = "elem2" class = "aaa ppp scrollX scrollY">
+		            Это элемент #elem2 
+		            <br>
+		            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices luctus arcu at lacinia. Morbi porttitor nec neque at hendrerit. Phasellus faucibus ante quis nunc ultricies efficitur. Curabitur vehicula, risus vel tincidunt pulvinar, justo erat viverra turpis, eu dignissim tellus arcu eu erat. Sed congue magna a velit placerat, eget pretium diam aliquet. Cras eu magna accumsan, pretium velit vitae, luctus diam. Nulla bibendum, eros nec eleifend aliquet, enim dolor finibus neque, id dictum nulla massa sit amet turpis. Etiam malesuada ut sapien ac varius. Nullam venenatis metus nibh, vitae laoreet quam imperdiet a. Aliquam erat volutpat. Nam vel risus hendrerit, tempus purus sed, tristique mauris.
+		            <br><br>
+		            Curabitur finibus in quam non scelerisque. Vivamus sed ultricies risus, eu luctus erat. Aenean sed volutpat lorem. Nam viverra tristique felis, a pellentesque est aliquet et. Donec ultricies ullamcorper venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus augue eu molestie gravida. Aliquam molestie massa id eros auctor, non vulputate ipsum porta.
+		            <br><br>
+		            Donec eu enim non arcu pellentesque faucibus. Nulla consequat aliquet dui, in efficitur dolor venenatis sed. Sed quis massa eget neque volutpat rutrum vitae nec tortor. Nunc placerat convallis magna, in mollis augue posuere at. Mauris sit amet ultricies diam. Quisque maximus condimentum ligula. Nullam quam ipsum, convallis sit amet maximus non, vestibulum ac ante. Aliquam dapibus euismod mollis. Integer interdum enim sit amet odio volutpat, et pellentesque neque molestie. Sed purus elit, hendrerit eget suscipit id, tempor at ex. 
+		        </p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem2 с вертикальной полосой прокрутки. По нажатию на кнопку выведите на сколько элемент прокручен сверху.
+		        </p>
+		        <p id = "r8"></p>
+		        <button onclick = "f8();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem2 с горизонтальной полосой прокрутки. По нажатию на кнопку выведите на сколько элемент прокручен слева.
+		        </p>
+		        <p id = "r9"></p>
+		        <button onclick = "f9();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem2 с вертикальной полосой прокрутки. По нажатию на кнопку прокрутите его до позиции 100px сверху.
+		        </p>
+		        <button onclick = "f10();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem2 с вертикальной полосой прокрутки. По нажатию на кнопку прокрутите его на 100px вниз от текущего положения.
+		        </p>
+		        <button onclick = "f11();">Выполнить</button>
+		    </div>
+
+		    <h1>Прокрутка элемента (scrollWidth, scrollHeight)</h1>   
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem2 с вертикальной полосой прокрутки. По нажатию на кнопку выведите реальную высоту элемента с учетом прокрутки.
+		        </p>
+		        <p id = "r12"></p>
+		        <button onclick = "f12();">Выполнить</button>
+		    </div>
+		    
+		 
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem2 с горизонтальной полосой прокрутки. По нажатию на кнопку выведите реальную ширину элемента с учетом прокрутки.
+		        </p>
+		        <p id = "r13"></p>
+		        <button onclick = "f13();">Выполнить</button>
+		    </div>
+
+		   <h1></h1>   
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан элемент #elem2 с вертикальной полосой прокрутки. По нажатию на кнопку прокрутите его до позиции 100px от нижнего края элемента.
+		        </p>
+		        <button onclick = "f14();">Выполнить</button>
+		    </div>
+
+		    <h1>Прокрутка страницы (pageXOffset, pageYOffset)</h1> 
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана страница с вертикальной полосой прокрутки. По нажатию на кнопку узнайте на сколько страница прокручена по вертикали.
+		        </p>
+		        <p id = "r15"></p>
+		        <button onclick = "f15();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана страница с горизонтальной полосой прокрутки. По нажатию на кнопку узнайте на сколько страница прокручена по горизонтали.
+		        </p>
+		        <p id = "r16"></p>
+		        <button onclick = "f16();">Выполнить</button>
+		    </div>
+
+		    <h1>Прокрутка страницы (scrollTo, scrollBy, scrollIntoView.)</h1> 
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана страница с горизонтальной и вертикальной полосами прокрутки. По нажатию на кнопку прокрутите ее в точку 300px слева, 500px сверху.
+		        </p>
+		        <p id = "r17"></p>
+		        <button onclick = "f17();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана страница с вертикальной полосой прокрутки. По нажатию на кнопку прокрутите на 300px вниз от текущего положения.
+		        </p>
+		        <p id = "r18"></p>
+		        <button onclick = "f18();">Выполнить</button>
+		    </div>
+
+		   <h1>Практика</h1> 
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            По нажатию на кнопку прокрутите страницу до самого низа.
+		        </p>
+		        <button onclick = "f19();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            По нажатию на кнопку прокрутите страницу на 400px вверх от текущего положения.
+		        </p>
+		        <button onclick = "f20();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            По нажатию на кнопку проверьте, прокручена ли страница до самого низа. Если это так - прокрутите ее в положение 100px от верхнего края.
+		        </p>
+		        <button onclick = "f21();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            	Дан элемент #elem. По двойному клику на него увеличьте его ширину и высоту в 2 раза.
+		            	<br>
+		            	<b>Готово.</b>
+		        </p>
+		    </div>
+		</div>
+	</body>
+</html>
