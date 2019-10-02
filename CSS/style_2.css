@@ -16,7 +16,6 @@ div.item
         border-radius: 30px;
         border: #7F3804 solid 1px;
         margin: 10px;
-        
     }
 h1, div.div_elem
     {
@@ -34,15 +33,42 @@ h1, div.div_elem
         text-decoration: underline;
         font-size: 15px;
         text-align: center;
+        padding: 10px 3px;
     }
 .ppp 
     {
         margin-left: auto;
         margin-right: auto;
         width: 160px;
-        border: 1px solid #5C2828;
+        border: 3px solid #c42b2b;
+        border-left: 6px dotted #850303;
+        
     }
 .ccc
     {
         color: #57D906;
+    }
+.scrollX
+    {
+        width: 70px;
+        overflow-x: auto;
+    }
+.scrollY
+    {
+        height: 105px;
+        overflow-y: auto;
+    }
+table, td, th
+    {
+        padding: 2px;
+        border-collapse: collapse;
+        border: 1px black solid;
+        text-align: center;
+        vertical-align: center;
+        margin: 5px;
+    }
+td
+    {
+        height: 20px;
+        width: 80px; 
     }
