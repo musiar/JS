@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Фотоальбом</title>
+		<meta charset = "UTF-8">
+		<style type="text/css">
+			body
+				{
+					background-color: #0c1836;
+
+				}
+			div, button
+				{
+					text-align: center;
+				}
+			h1
+				{
+					color: #d5d8e0;
+				}
+			img
+				{
+					padding: 5px;
+					border-radius: 40px;
+					border: solid 5px #d5d8e0;
+					background-color: #0c1836;
+					margin-bottom: 10px;
+				}
+			button
+				{
+					font-weight: bold;
+					border-radius: 35px;
+					height: 36px;
+					width: 80px;
+					background-color: #d5d8e0;
+					color: #0c1836;
+				}
+			button:hover
+				{
+					background-color: #0c1836;
+					color: #d5d8e0;
+				}
+			button:nth-child(even)
+				{
+					margin-right: 3px;
+				}
+			button:nth-child(odd)
+				{
+					margin-right: 20px;
+				}
+
+		</style>
+		<script>
+			var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg'],
+				l = images.length, i = 0, timer,
+				myImage = document.getElementById('my_image');
+
+			function nextImage()
+				{
+					myImage = document.getElementById('my_image');
+					if (i<l-1)
+							i++;
+					else i = 0;
+					myImage.setAttribute('src', 'img/' + images[i]);
+				}
+			function previousImage()
+				{
+					myImage = document.getElementById('my_image');
+					if (i==0)
+							i=l-1;
+					else i--;
+					myImage.setAttribute('src','img/' +  images[i]);
+				}
+			function slideShow()
+				{
+					if(!timer)
+						timer = setInterval(nextImage, 1000);
+					/*else 
+						{
+							clearInterval(timer);
+							timer = null;
+						}*/
+				}
+			function stopShow()
+				{
+					if(timer)
+						{
+							clearInterval(timer);
+							timer = null;
+						}
+				}
+			//Добавить функцию для переключения изображения при клике на фото
+			window.addEventListener('load', function(){
+					var img = document.querySelector('body > div > img');
+					myScreen = img.width/2;
+					img.addEventListener('click', 
+						function(evt){
+							if(!evt)
+								evt = event; // для старых версий IE
+							var c = evt.offsetX;
+							if (c <= myScreen)
+								previousImage();
+							else nextImage();
+						})
+				}
+				)
+		</script>			
+	</head>
+
+	<body>
+		<div>
+			<h1>Фотографии тюленей</h1>
+			<img src="img/1.jpg" id = "my_image">
+			<br>
+				<button onclick="previousImage()">&#9668;</button>
+				<button onclick="nextImage()">&#9658;</button>
+				<button onclick="slideShow()">Слайдшоу</button>
+				<button onclick="stopShow()">Стоп</button>
+		</div>
+	</body>
+</html>
