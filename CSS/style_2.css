@@ -72,3 +72,14 @@ td
         height: 20px;
         width: 80px; 
     }
+.test_block
+    {
+        height: 300px;
+    }
+.ball
+    {
+        width: 60px;
+        height: 60px;
+        background-color: #000000;
+        position: relative;
+    }
