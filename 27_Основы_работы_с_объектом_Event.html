@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Основы работы с объектом Event на JavaScript</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_27.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+			<h1>Задачи на координаты</h1>
+			
+				<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+						Дан блок. При наведении мыши на блок необходимо отобразить координаты курсора относительно блока.
+				 </p>
+			</div> 
+			
+			<div class = "div_elem item test_block" id = "r1">
+				 <p id = "r1_x"></p>
+				 <p id = "r1_y"></p>
+			</div>
+			
+
+			<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+					 При клике на любое место блока перемещайте квадрат на это место.
+					 <b>Левый верхний угол</b> квадрата должен соответствовать месту клика.
+				 </p>
+			</div>
+
+			<div class = "div_elem item test_block" id = "r2">
+				 <div id = "r2_ball" class = "ccc ball"></div>
+			</div>
+
+
+			<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+					 При клике на любое место блока перемещайте квадрат на это место.
+					 <b>Центр</b> квадрата должен соответствовать месту клика.
+				 </p>
+			</div>
+
+			<div class = "div_elem item test_block" id = "r3">
+				 <div id = "r3_ball" class = "ccc ball"></div>
+			</div>
+
+			<h1>Задачи на клавиши</h1>
+
+			<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+					 Вывести код нажатой клавиши
+				 </p>
+				 <input type = "text" id = "f4_text">
+				 <p>Код нажатой клавиши: <span id = "r4">?</span></p>
+			</div>
+
+			<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+					 Вывести символ нажатой клавиши
+				 </p>
+				 <input type = "text" id = "f5_text">
+				 <p>Нажата клавиша: <span id = "r5">?</span></p>
+			</div>
+
+			<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+					 Дан элемент. Сделайте так, чтобы по клику на него он красился в красный цвет, но только если в момент клика нажата клавиша Ctrl,
+					 Alt - в синий, Shift - в зелёный.
+					 
+				 </p>
+				 <p id = "r6" class = "ball"></p>
+			</div>
+
+			<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+					 Дан элемент. Сделайте так, чтобы при клике на него и нажатой клавише Ctrl - в его текст записывалось '1', при нажатой клавише Alt - '2', а при нажатой клавише Shift - '3'. 
+				 </p>
+				 <input id = "r7" type = "text" style = "padding-left: 10px; background-color: #ededed;" readonly>
+			</div>
+
+			<div class = "item">
+				 <p>
+					 <span class = "num"></span>
+					 Дан инпут. В него вводится текст и нажимается клавиша Enter (ее код имеет номер 13). Сделайте так, чтобы по нажатию Enter введенный текст попадал в абзац под инпутом, а содержимое инпута очищалось. 
+				 </p>
+				 <input id = "f8_text" type = "text" style = "padding-left: 10px">
+				 <p id = "r8"></p>
+			</div>
+
+		</div>
+	</body>
+</html>
