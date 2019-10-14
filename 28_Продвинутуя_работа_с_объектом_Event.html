@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Продвинутая работа с объектом Event</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_28.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+				<h1>Задачи на продвинутую работу с объектом Event</h1>
+				
+				   <div class = "item">
+					<p>
+						<span class = "num"></span>
+						Дан ul, в нем несколько li. Под ul сделайте кнопку, по нажатию на которую в конец ul будет добавляться новый li с текстом 'пункт'. Сделайте так, чтобы при клике на каждый li, ему в конец добавлялся '!'. Это должно работать и для вновь добавленных li.
+						<br>
+						Задачу решите с помощью делегирования (то есть событие должно быть навешано на ul).
+					</p>
+					<ul id = "r1">
+						<li>Это <i>пункт</i> списка</li>
+						<li><b>Это <span class = "ccc">ещё один</span></b> пункт</li>
+					</ul>
+					<button id = "f1_add_btn">Добавить</button>
+				</div> 
+				
+				
+				<div class = "item">
+					<p>
+						<span class = "num"></span>
+						Дана таблица с юзерами с двумя колонками: имя и фамилия. Под таблицей сделайте форму, с помощью которой можно будет добавить нового юзера в таблицу. Сделайте так, чтобы при ctrl-клике на любую ячейку появлялся prompt, с помощью которого можно изменить текст ячейки. Задачу решите с помощью делегирования (то есть событие должно быть навешано на table). 
+					</p>
+					<table id = "r2">
+						<tr>
+							<th>Фамилия</th>
+							<th>Имя</th>
+						</tr> 
+						<tr>
+							<td>Иванов</td>
+							<td>Иван</td>
+						</tr>
+						<tr>
+							<td>Петров</td>
+							<td>Пётр</td>
+						</tr>
+					</table>
+					<div style = "margin: 10px 0px 10px;  padding: 10px; border: 1px dotted #852929; width: 200px">
+						<b>Добавить пользователя</b>
+						<input type = "text" placeholder = "Введите фамилию" id = "lastname">
+						<br>
+						<input type = "text" placeholder = "Введите имя" id = "firstname">
+						<br>
+						<button id = "f2_add_btn">Добавить</button>
+					</div>
+				</div>
+
+			</div>
+	</body>
+</html>
