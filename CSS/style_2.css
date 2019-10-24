@@ -83,3 +83,7 @@ td
         background-color: #000000;
         position: relative;
     }
+select
+    {
+        min-width: 70px;
+    }
