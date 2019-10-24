@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Формы и селекты</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_29.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+    <h1>Работа с формами</h1>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+           		Дана форма с name="form1". В ней даны инпуты, в них числа. Дана кнопка. По нажатию на эту кнопку получите форму по ее name, затем циклом переберите все инпуты в ней и найдите сумму чисел из этих инпутов.
+        </p>
+        <form name = "form1">
+            <input type = "number" placeholder = "Число 1">
+            <input type = "number" placeholder = "Число 2">
+            <br>
+            <input type = "number" placeholder = "Число 3">
+            <input type = "number" placeholder = "Число 4">
+        </form>
+        <br>
+        <input id = "r1" type = "text" placeholder = "Сумма чисел" readonly>
+        <br>
+        <button onclick = "f1();">Посчитать</button>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            На странице расположено несколько форм. В них есть инпуты, в инпутах числа. Дана кнопка. По нажатию на эту кнопку циклом переберите все формы на странице, затем циклом переберите все инпуты в каждой форме и найдите сумму чисел из всех этих инпутов.
+        </p>
+        <h4>Форма 2</h4>
+        <form name = "form2">
+            <input type = "number" placeholder = "Число 1">
+            <input type = "number" placeholder = "Число 2">
+            <br>
+            <input type = "number" placeholder = "Число 3">
+            <input type = "number" placeholder = "Число 4">
+        </form>
+        <h4>Форма 3</h4>
+        <form name = "form3">
+            <input type = "number" placeholder = "Число 1">
+            <input type = "number" placeholder = "Число 2">
+            <br>
+            <input type = "number" placeholder = "Число 3">
+            <input type = "number" placeholder = "Число 4">
+        </form>
+        <br>
+        <input id = "r2" type = "text" placeholder = "Сумма чисел" readonly>
+        <br>
+        <button onclick = "f2();">Выполнить</button>
+    </div>
+
+    <h1>Работа с селектами</h1>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан селект. Дан инпут. По изменению селекта выведите текст выбранного пункта в инпут. 
+        </p>
+        <select id = "select3" onchange = "f3();">
+            <option>Москва</option>
+            <option>Тверь</option>
+            <option>Тула</option>
+            <option>Владимир</option>
+            <option>Смоленск</option>
+        </select>
+        <p id = "r3"></p>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан селект. Дан инпут. Дана кнопка. Сделайте так, чтобы в инпут можно было ввести число, нажать на кнопку и в селекте становился выбранным пункт с этим номером. 
+        </p>
+        
+        <select id = "r4">
+            <option>Первый</option>
+            <option>Второй</option>
+            <option>Третий</option>
+            <option>Четвертый</option>
+            <option>Пятый</option>
+            <option>Шестой</option>
+            <option>Седьмой</option>
+            <option>Воcьмой</option>
+            <option>Девятый</option>
+            <option>Десятый</option>
+        </select>
+        <input id = "num4" type = "number" min = "1" max = "10" onchange = "f4();">
+    </div>
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан селект со списком стран. Сделайте так, чтобы при выборе страны рядом появлялся еще и селект со списком городов из этой страны.
+        </p>
+        <select id = "countries" onchange = "addCities();">
+            <!-- Тут будет список стран -->
+        </select>
+
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны 3 селекта: с днем, с месяцем и годом. Сделайте так, чтобы некорректную дату нельзя было выбрать.
+        </p>
+        <fieldset>
+            <legend>Выберите дату</legend>
+            
+            День: <select id = "day_select">
+            </select>
+            
+            Месяц: <select id = "month_select"> 
+            </select>
+            
+            Год: <select id = "year_select">
+            </select>
+        </fieldset>
+    </div>
+    
+</div>
+	</body>
+</html>
