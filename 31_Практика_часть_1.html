@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Практика JavaScript</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_31_1.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+    <h1>Практика JavaScript #1</h1>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны 3 инпута и кнопка. По нажатию на кнопку получите числа, стоящие в этих инпутах и запишите их сумму в четвертый инпут.
+        </p>
+        <fieldset>
+            <legend>Аргументы</legend>
+            <input type = "number" class = "ccc" placeholder = "Введите число">
+            <input type = "number" class = "ccc" placeholder = "Введите число">
+            <input type = "number" class = "ccc" placeholder = "Введите число">
+        </fieldset>
+        <br>
+        <input id = "r1" readonly placeholder = "Тут будет сумма">
+        <br>
+        <button onclick = "getClassSum('ccc', 'r1');">Выполнить</button>
+        <button onclick = "clearForm('ccc', 'r1');">Очистить</button>
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны N инпутов с классом .aaa и кнопка. По нажатию на кнопку получите числа, стоящие в этих инпутах и запишите их сумму в абзац с id="result".
+        </p>
+        <fieldset>
+            <legend>Аргументы</legend>
+            <input type = "number" class = "aaa" placeholder = "Введите число">
+            <input type = "number" class = "aaa" placeholder = "Введите число">
+            <input type = "number" class = "aaa" placeholder = "Введите число">
+            <input type = "number" class = "aaa" placeholder = "Введите число">
+            <input type = "number" class = "aaa" placeholder = "Введите число">
+        </fieldset>
+        <br>
+        <input id = "r2" readonly placeholder = "Тут будет сумма">
+        <br>
+        <button onclick = "getClassSum('aaa', 'r2');">Выполнить</button>
+        <button onclick = "clearForm('aaa', 'r2');">Очистить</button>
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+           Дан инпут. В него вводится число. По потери фокуса найдите сумму цифр этого числа. 
+        </p>
+        <input type = "number" id = "f3_num" placeholder = "Введите число" onblur = "getNumSum()">
+        <p>Сумма цифр: <span id = "r3" class = "www">?</span></p>
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводятся числа через запятую. По потери фокуса найдите среднее арифметическое этих чисел.
+        </p>
+        <input type = "text" id = "f4_num" onblur = "getAvg();">
+        <p>Среднее арифметическое: <span id = "r4" class = "www">?</span></p>
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится ФИО через пробел. По потери фокуса запишите фамилию, имя и отчество в отдельные инпуты.
+        </p>
+        <p>
+            Введите ФИО:
+            <input type = "text" id = "f5_txt" placeholder = "Иванов Иван Иванович" onblur = "getFio();">
+        </p>
+        <input type = "text" class = "fio" readonly placeholder = "Фамилия">
+        <input type = "text" class = "fio" readonly placeholder = "Имя">
+        <input type = "text" class = "fio" readonly placeholder = "Отчество">
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится ФИО через пробел. ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса инпутом, введенные фамилия, имя и отчество автоматически стали записанными с большой буквы (в том же инпуте).
+        </p>
+        <input type = "text" placeholder = "Иванов Иван Иванович" onblur = "f6(this);">
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится текст. По потери фокуса узнайте количество слов в этом тексте. 
+        </p>
+        <input type = "text" placeholder = "Введите текст" onblur = "f7(this.value, 'r7');">
+        <p>Количество слов: <span id = "r7" class = "www">?</span></p>
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится текст. По потери фокуса узнайте количество символов в самом длинном слове в этом тексте. 
+        </p>
+        <input type = "text" placeholder = "Введите текст" onblur = "f8(this.value, 'r8_1', 'r8_2');">
+        <p>Самое длинное слово: <span id = "r8_1" class = "www">?</span>
+            <br>
+            Количество символов: <span id = "r8_2" class = "www">?</span>
+        </p>
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса в этом же инпуте поставьте эту дату в формате 2016-12-31.
+        </p>
+        <input type = "text" onblur = "f9(this);">
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится год рождения пользователя. По нажатию на кнопку выведите в абзац ниже сколько пользователю лет.
+        </p>
+        <input type = "number" min = "1900" onblur = "f10(this, 'r10');">
+        <p>Пользователю лет: <span id = "r10" class = "www">?</span></p>
+    </div>  
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится дата в формате 31.12.2016. По потери фокуса узнайте день недели (словом), который приходится на эту дату.
+        </p>
+        <input type = "date" onchange = "f11(this, 'r11')">
+        <p id = "r11">
+    </div>
+
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится слово. Проверьте то, что это слово читается с начала и с конца одинаково (например, мадам).
+        </p>
+        <input type = "text" onchange = "f12(this.value, 'r12');">
+        <p>Яляется палиндромом: <span id = "r12" class = "www">?</span></p>
+    </div>    
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. В него вводится число. Проверьте по вводу, что это число содержит внутри себя цифру 3.
+        </p>
+        <input type = "number" onchange = "f13(this.value, 'r13')">
+        <p>Содержит ли цифру 3: <span id = "r13" class = "www">?</span></p>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны N абзацев и кнопка. По нажатию на кнопку запишите в конец каждого абзаца его порядковый номер.
+        </p>
+        <div id = "r14">
+            <p>Абзац</p>
+            <p>Абзац</p>
+            <p>Абзац</p>
+            <p>Абзац</p>
+            <p>Абзац</p>
+            <p>Абзац</p>
+            <p>Абзац</p>
+        </div>
+        <button id = "btn14">Выполнить</button>
+    </div>
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны N абзацев с числами. По нажатию на кнопку выведите эти числа в инпут через запятую в порядке возрастания.
+        </p>
+        <div id = "r15">
+            <p>25</p>
+            <p>35</p>
+            <p>23</p>
+            <p>1</p>
+            <p>8</p>
+            <p>16</p>
+            <p>84</p>
+        </div>
+        <div id = "res15">
+            
+        </div>
+        <button id = "btn15">Выполнить</button>
+
+    </div>
+    
+    <div class = "item div_elem">
+        <h3>Ссылки:</h3>
+        <a href = "https://vk.com/" target = "blank">Вконтакте</a><br>
+        <a href = "https://github.com/" target = "blank">github</a><br>
+        <a href = "https://learn.javascript.ru/" target = "blank">Учебник JS</a><br>
+        <a href = "https://www.livemaster.ru/" target = "blank">Ярмарка Мастеров</a><br>
+        <a href = "http://old.code.mu/" target = "blank">code.mu</a><br>
+        <a href = "https://www.tutu.ru/" target = "blank">Туту</a><br>
+        <a href = "http://beloweb.ru/" target = "blank">beloweb</a><br>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны ссылки. По загрузке страницы добавьте в конец каждой ссылки ее href в круглых скобках.
+        </p>
+    </div>
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны ссылки. По загрузке страницы, если ссылка начинается с http://, то добавьте ей в конец стрелку (&rarr;).
+        </p>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны N абзацев с числами. По нажатию на любой абзац запишите в него квадрат числа, которое в нем находится.
+        </p>
+        <div id = "r18">
+            <p>1.5</p>
+            <p>4</p>
+            <p>7</p>
+            <p>2</p>
+            <p>33</p>
+            <p>0.025</p>
+        </div>
+    </div>
+    
+    <div class = "item div_elem img">
+        <img src = "img/1.jpg" width = "160" height = "120">
+        <img src = "img/2.jpg" width = "160" height = "120">
+        <img src = "img/3.jpg" width = "160" height = "120">
+        <img src = "img/4.jpg" width = "160" height = "120">
+        <img src = "img/5.jpg" width = "160" height = "120">
+        <img src = "img/6.jpg" width = "160" height = "120">
+    </div>
+    
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны картинки. По нажатию на любую картинку увеличьте ее в 2 раза.
+        </p>
+    </div>
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны картинки. По первому нажатию на любую картинку увеличьте ее в 2 раза. По второму нажатию - уменьшите обратно.
+        </p>
+    </div>
+    
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Даны N картинок размера 40px на 30px. По нажатию на картинку под ними эта картинка появляется размером в 160px на 120px.
+        </p>
+        <div class = "item div_elem img2">
+            <img src = "img/1.jpg" width = "40" height = "30">
+	        <img src = "img/2.jpg" width = "40" height = "30">
+	        <img src = "img/3.jpg" width = "40" height = "30">
+	        <img src = "img/4.jpg" width = "40" height = "30">
+	        <img src = "img/5.jpg" width = "40" height = "30">
+	        <img src = "img/6.jpg" width = "40" height = "30">
+	        <img src = "img/7.jpg" width = "40" height = "30">
+	        <img src = "img/8.jpg" width = "40" height = "30">
+	        <img src = "img/9.jpg" width = "40" height = "30">
+            <br>
+            <img id = "r21" width = "160" height = "120" hidden>
+        </div>
+    </div>
+
+    <div class = "item">
+        <p>
+            <span class = "num"></span>
+            Дан инпут. Реализуйте кнопочки +1, -1, которые будут увеличивать или уменьшать на 1 значение инпута. Сделайте так, чтобы это значение не могло стать меньше нуля.
+        </p>
+        <button onclick = "plus()">+</button>
+        <input type = "number" title = "Число" class = "num22" onchange = "checkNum(this);" id = "r22" value = "10">
+        <button onclick = "minus();">-</button>
+
+    </div>
+    
+</div>
+	</body>
+</html>
