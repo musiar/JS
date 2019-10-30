@@ -87,3 +87,19 @@ select
     {
         min-width: 70px;
     }
+input.num22::-webkit-outer-spin-button,
+input.num22::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input.num22[type='number'] {
+    -moz-appearance: textfield;
+}
+div.img
+    {
+        min-height: 80px;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
