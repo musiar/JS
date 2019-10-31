@@ -103,3 +103,11 @@ div.img
         justify-content: space-around;
         align-items: center;
     }
+.green
+    {
+        background-color: #9df2a0;
+    }
+.red
+    {
+        background-color: #f29da3;
+    }
