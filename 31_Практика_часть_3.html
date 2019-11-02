@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Практика JavaScript</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_31_3.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Практика JavaScript #3</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана кнопка. Дан чекбокс. По нажатию на кнопку меняйте состояние чекбокса с отмеченного на неотмеченное и наоборот.
+		        </p>
+		        <input type = "checkbox" id = "r1">
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны чекбокс. Дана кнопка. По нажатию на кнопку сделайте все чекбоксы отмеченными.
+		        </p>
+		        
+		        <div id = "r2">
+		            <input type = "checkbox">
+		            <input type = "checkbox">
+		            <input type = "checkbox">
+		            <input type = "checkbox">
+		        </div>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Спросите у пользователя какой язык (html, css, js, php) он знает с помощью радио кнопочек. Выведите этот язык в абзац. 
+		        </p>
+		        <div id = "div3">
+		            <input type = "radio" name = "lng" value = "HTML">HTML
+		            <br>
+		            <input type = "radio" name = "lng" value = "CSS">CSS
+		            <br>
+		            <input type = "radio" name = "lng" value = "JS">JS
+		            <br>
+		            <input type = "radio" name = "lng" value = "PHP">PHP            
+		        </div>
+		        <p>Я знаю <span id = "r3" class = "www">?</span>.</p>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Спросите у пользователя какие языки (html, css, js, php) он знает с помощью чекбоксов. Выбранные языки должны выводится в абзац ниже через запятую.
+		        </p>
+		        <div id = "div4">
+		            <input type = "checkbox" value = "HTML">HTML
+		            <input type = "checkbox" value = "CSS">CSS
+		            <input type = "checkbox" value = "JS">JS
+		            <input type = "checkbox" value = "PHP">PHP
+		        </div>
+		        <p>Я знаю <span id = "r4" class = "www">?</span>.</p>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан чекбокс. Дан инпут. Сделайте так, что если чекбокс отмечен - инпут видимый, если не отмечен - не видимый.
+		        </p>
+		        <input type = "checkbox" onchange = "f5(this);" checked>
+		        <input type = "text" id = "r5" value = "Надо спрятаться!" readonly>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны чекбоксы. Под каждым чекбоксом размещен абзац. Сделайте так, что если чекбокс отмечен - соответствующий абзац видимый, а если не отмечен - не видимый.
+		        </p>
+		        <input type = "checkbox" class = "f6_inp"><p>Здесь абзац 1</p>
+		        <input type = "checkbox" class = "f6_inp"><p>Здесь абзац 2 </p>
+		        <input type = "checkbox" class = "f6_inp"><p>Здесь абзац 3</p>
+		        <input type = "checkbox" class = "f6_inp"><p>Здесь абзац 4</p>
+		        <input type = "checkbox" class = "f6_inp"><p>Здесь абзац 5</p>
+		        
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан инпут. Даны li. В инпут пишется номер. Сделайте так, чтобы по вводу числа, li с заданным номером покрасился в красный цвет. 
+		        </p>
+		        <input type = "number" min = "1" max = "10" onchange = "f7(this.value);">
+		        <ol id = "r7">
+		            <li>Жираф</li>
+		            <li>Олень</li>
+		            <li>Зебра</li>
+		            <li>Корова</li>
+		            <li>Крокодил</li>
+		            <li>Леопард</li>
+		            <li>Собака</li>
+		            <li>Коза</li>
+		            <li>Тюлень</li>
+		            <li>Лебедь</li>
+		        </ol>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан абзац. Даны чекбоксы 'перечеркнуть', 'сделать жирным', 'сделать красным'. Если соответствующий чекбокс отмечен - заданное действие происходит с абзацем (становится красным, например). Если чекбоксу снять отметку - действие отменяется.
+		        </p>
+		        <fieldset>
+		            <legend>Работа с текстом</legend>
+		            <p id = "r8">Это абзац!</p>
+		            <input type = "checkbox" value = "text-decoration: line-through;" class = "f8_inp">Перечеркнуть
+		            <br>
+		            <input type = "checkbox" value = "font-weight: bold;" class = "f8_inp">Сделать жирным
+		            <br>
+		            <input type = "checkbox" value = "color: red;" class = "f8_inp">Сделать красным
+		        </fieldset>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан блок с кнопкой 'закрыть блок'. По нажатию на эту кнопку блок должен исчезнуть. Кнопка размещается внутри блока и должна исчезнуть вместе с ним. Блоков может быть любое количество, каждый из них закрывает своя кнопка.
+		        </p>
+		        <div class = "www">
+		            <p>Это блок с абзацем.</p>
+		            <button class = "closeDiv">Закрыть блок</button>
+		        </div>
+		        <div class = "www">
+		            <p>Это блок с абзацем.</p>
+		            <button class = "closeDiv">Закрыть блок</button>
+		        </div>
+		        <div class = "www">
+		            <p>Это блок с абзацем.</p>
+		            <button class = "closeDiv">Закрыть блок</button>
+		        </div>
+		        <div class = "www">
+		            <p>Это блок с абзацем.</p>
+		            <button class = "closeDiv">Закрыть блок</button>
+		        </div>
+		    </div>
+
+		</div>
+	</body>
+</html>
