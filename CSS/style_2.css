@@ -28,6 +28,11 @@ h1, div.div_elem
         background-color: #E5C1C1;
         border-radius: 10px;
     }
+div.www
+    {
+        padding: 10px;
+        margin: 10px;
+    }
 .aaa
     {
         text-decoration: underline;
