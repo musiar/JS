@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Практика JavaScript</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_31_4.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Практика JavaScript #4</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            	В инпут через запятую вводятся страны. По нажатию на кнопку сделайте так, чтобы эти страны записались в ul под инпутом (каждая страна отдельный li).<br>
+		            	Удаление страны по двойному клику.
+		        </p>
+		        <h3>Список стран:</h3>
+		        <input type = "text" placeholder = "Название стран" id = "inp1">
+		        <button onclick = "f1()">Добавить</button>
+		        <ul id = "r1">
+		           
+		        </ul>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            В инпут вводится страна и нажимается Enter. По нажатию на Enter сделайте так, чтобы введенные страны записывались в абзац под инпутом через запятую. То есть по каждому нажатию Enter в абзац будут добавляться все новые и новые страны.
+		        </p>
+		        
+		        <input type = "text" placeholder = "Название страны" id = "inp2">
+		        <h3>Список стран:</h3>
+		        <p id = "r2">
+		           
+		        </p>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            На странице есть дивы. В них есть текст. Обойдите все дивы и обрежьте тот текст, который в них стоит так, чтобы он стал длиной 30 символов. И добавьте троеточие в конец обрезанного текста.
+		        </p>
+		        <button onclick = "f3();">Выполнить</button>
+		        <div class = "r3 www">Метод split() разбивает объект String на массив строк путём разделения строки указанной подстрокой</div>
+		        <div class = "r3 www">Свойство event.keyCode позволяет узнать нажатую клавишу при вводе текста. Свойство возвращает не саму клавишу, а ее код.</div>
+		        <div class = "r3 www">Метод substring возвращает подстроку из строки.</div>
+		        <div class = "r3 www">Метод toLowerCase производит преобразование строки в нижний регистр .</div>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана таблица с числами. По нажатию на кнопку найдите ячейку, в которой хранится максимальное число, и сделайте ее фон красным.
+		        </p>
+		        <button onclick = "f4();">Выполнить</button>
+		        <table id = "r4">
+		            <tr>
+		                <td>23</td>
+		                <td>25</td>
+		                <td>59</td>
+		                <td>11</td>
+		            </tr>
+		            <tr>
+		                <td>24</td>
+		                <td>50</td>
+		                <td>19</td>
+		                <td>3</td>
+		            </tr>
+		            <tr>
+		                <td>26</td>
+		                <td>8</td>
+		                <td>11</td>
+		                <td>17</td>
+		            </tr>
+		            <tr>
+		                <td>59</td>
+		                <td>41</td>
+		                <td>33</td>
+		                <td>28</td>
+		            </tr>
+		            <tr>
+		                <td>0</td>
+		                <td>16</td>
+		                <td>2</td>
+		                <td>48</td>
+		            </tr>
+		        </table>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана таблица с числами. По нажатию на кнопку в инпут под таблицей выведите эти числа через запятую в порядке возрастания.
+		        </p>
+		        <button onclick = "f5();">Выполнить</button>
+		        <p>Числа по возрастанию: <span id = "num5" class = "www">?</span></p>
+		        <table id = "r5">
+		            <tr>
+		                <td>23</td>
+		                <td>55</td>
+		                <td>11</td>
+		            </tr>
+		            <tr>
+		                <td>24</td>
+		                <td>50</td>
+		                <td>3</td>
+		            </tr>
+		            <tr>
+		                <td>26</td>
+		                <td>8</td>
+		                <td>11</td>
+		            </tr>
+		            <tr>
+		                <td>59</td>
+		                <td>41</td>
+		                <td>33</td>
+		            </tr>
+		            <tr>
+		                <td>0</td>
+		                <td>16</td>
+		                <td>2</td>
+		            </tr>
+		        </table>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана таблица с числами. По нажатию на кнопку в последний ряд таблицы в каждую ячейку запишите сумму чисел в столбце таблицы, расположенном над определенной ячейкой.
+		        </p>
+		        <button id = "btn6">Выполнить</button>
+		        <table id = "r6">
+		            <tr>
+		                <td>23</td>
+		                <td>25</td>
+		                <td>59</td>
+		                <td>11</td>
+		            </tr>
+		            <tr>
+		                <td>24</td>
+		                <td>50</td>
+		                <td>19</td>
+		                <td>3</td>
+		            </tr>
+		            <tr>
+		                <td>26</td>
+		                <td>8</td>
+		                <td>11</td>
+		                <td>17</td>
+		            </tr>
+		            <tr>
+		                <td>59</td>
+		                <td>41</td>
+		                <td>33</td>
+		                <td>28</td>
+		            </tr>
+		            <tr>
+		                <td>0</td>
+		                <td>16</td>
+		                <td>2</td>
+		                <td>48</td>
+		            </tr>
+		        </table>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана таблица с числами. По нажатию на ячейку она активируется и становится красного цвета. Активировать можно много ячеек. Под таблицей кнопка. По нажатию по этой кнопке в абзац ниже выведите сумма активированных ячеек. Реализуйте кнопку 'сбросить активированные ячейки'.
+		        </p>
+		        <table id = "r7">
+		            <tr>
+		                <td>23</td>
+		                <td>25</td>
+		                <td>59</td>
+		                <td>11</td>
+		            </tr>
+		            <tr>
+		                <td>24</td>
+		                <td>50</td>
+		                <td>19</td>
+		                <td>3</td>
+		            </tr>
+		            <tr>
+		                <td>26</td>
+		                <td>8</td>
+		                <td>11</td>
+		                <td>17</td>
+		            </tr>
+		            <tr>
+		                <td>59</td>
+		                <td>41</td>
+		                <td>33</td>
+		                <td>28</td>
+		            </tr>
+		            <tr>
+		                <td>0</td>
+		                <td>16</td>
+		                <td>2</td>
+		                <td>48</td>
+		            </tr>
+		        </table>
+		        <input type = "number" id = "sum7" placeholder = "Сумма красных">
+		        <button onclick = "getSum();">Посчитать сумму</button>
+		        <br>
+		        <button onclick = "clearAll();">Очистить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана таблица. По двойному клику на ячейку в ней появляется инпут с содержимым этой ячейки. Можно поредактировать текст в инпуте, сохранить - и текст ячейки поменяется.
+		        </p>
+		        <table id = "r8">
+		            <tr>
+		                <td>23</td>
+		                <td>25</td>
+		                <td>59</td>
+		            </tr>
+		            <tr>
+		                <td>24</td>
+		                <td>50</td>
+		                <td>19</td>
+		            </tr>
+		            <tr>
+		                <td>26</td>
+		                <td>8</td>
+		                <td>11</td>
+		            </tr>
+		        </table>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Реализуйте раскрывающийся список. По умолчанию есть список стран (ul), по нажатию на страну внутри li со страной появляется список городов. 
+		        </p>
+		        <ul id = "r9">
+		            <li><p>Россия</p>
+		                <ul hidden>
+		                    <li>Москва</li>
+		                    <li>Тверь</li>
+		                    <li>Тула</li>
+		                    <li>Воронеж</li>
+		                </ul>
+		            </li>
+		            
+		            <li><p>Украина</p>
+		                <ul hidden>
+		                    <li>Киев</li>
+		                    <li>Харьков</li>
+		                    <li>Одесса</li>
+		                </ul>                
+		            </li>
+		            
+		            <li><p>Беларусь</p>
+		                <ul hidden>
+		                    <li>Минск</li>
+		                    <li>Витебск</li>
+		                    <li>Бобруйск</li>
+		                </ul>                
+		            </li>
+		        </ul>
+		    </div>
+
+		</div>
+	</body>
+</html>
