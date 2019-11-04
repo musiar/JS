@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Практика JavaScript</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_31_5.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Практика JavaScript #5</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны два селекта. В первом находятся страны, во втором - города. Сделайте так, чтобы когда выбирается определенная страна - в другом селекте появлялись города этой страны. В абзац ниже пишите выбранную страну и город через запятую.
+		        </p>
+		        <b>Страна: </b>
+		        <select id = "r1_1" value = "" style = "min-width: 130px" onchange = "f1();">
+		            <option value="" selected disabled hidden>Выберите страну</option>
+		            <option value="ru">Россия</option>
+		            <option value="ukr">Украина</option>
+		            <option value="bel">Беларусь</option>
+		        </select>
+		        <b>Города: </b>
+		        <select id = "r1_2" style = "min-width: 130px" onchange = "city1();">
+		            <option value="" selected disabled hidden>Выберите город</option>
+		            
+		        </select>
+		        
+		        
+		        <h3>Выбранные значения:</h3>
+		        <p>Страна: <span id = "c1" class = "www"></span></p>
+		        <p>Город: <span id = "city1"  class = "www"></span></p>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте селекты день, мес, год. Сделайте так, чтобы не корректную дату нельзя было выбрать (например, 30 февраля нельзя, а 30 марта можно или 29 февраля можно, но только в високосный год). 
+		        </p>
+		        <select id = "d2">
+		            
+		        </select>
+		        <select id = "m2">
+		            
+		        </select>
+		        <select id = "y2">
+		            
+		        </select>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Реализуйте калькулятор валют. Есть два селекта - селект с исходной валюты, селект с той валютой, в которую мы хотим перевести деньги, инпут, в который вводится сумма для обмена. Курсы валют храните в массиве. Сделайте так, чтобы в селектах нельзя было выбрать две одинаковых валюты. 
+		        </p>
+		        Купить
+		        <select id = "r3_1">
+		            <option value="rur">Рубли</option>
+		        	<option value="usd">Доллары</option>
+		        	<option value="eur">Евро</option>
+		        </select>
+		        за
+		        <select id = "r3_2">
+		            <option value="rur">Рубли</option>
+		        	<option value="usd">Доллары</option>
+		        	<option value="eur">Евро</option>
+		        </select>
+		        <br>
+		        Количество: <input type = "number" id = "cnt3">
+		        <br>
+		        <button onclick = "f3();">Рассчитать</button>
+		        <p>Итого: <span id = "r3" class = "www">?</span></p>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Реализуйте генератор таблиц, ширина и высота таблиц задается в двух инпутах (например, таблица 5 на 10 ячеек).
+		        </p>
+		        <fieldset>
+		            <legend>Величина таблицы</legend>
+		            Число строк: <input type = "number" max = "15" placeholder = "Число строк" id = "row4">
+		            <br>
+		            Число колонок: <input type = "number" max = "15" placeholder = "Число колонок" id = "col4">
+		            <br>
+		            <button onclick = "f4();">Выполнить</button>
+		        </fieldset>
+		        <table id = "r4">
+		            
+		        </table>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан список и кнопка. По нажатию на кнопку посортируйте пункты списка по возрастанию.
+		        </p>
+		        <button onclick = "f5();">Сортировать</button>
+		        <ul id = "r5">
+		            <li>2</li>
+		            <li>-4</li>
+		            <li>10</li>
+		            <li>3</li>
+		            <li>16</li>
+		            <li>13</li>
+		        </ul>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            	Дан ряд ссылок. Сделайте так, чтобы по нажатию на ссылку она становилась с красным фоном. По нажатию на другую ссылку выделение первой ссылки снимается и выделяется та, на которую мы нажали. В абзац ниже пишите текст активной ссылки.
+		        </p>
+		        <div id = "r6">
+		            <a href = "1.html">Ссылка 1</a>
+		            <a href = "1.html">Ссылка 2</a>
+		            <a href = "1.html">Ссылка 3</a>
+		            <a href = "1.html">Ссылка 4</a>
+		            <a href = "1.html">Ссылка 5</a>
+		            <a href = "1.html">Ссылка 6</a>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
