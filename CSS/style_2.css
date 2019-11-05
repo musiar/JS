@@ -33,6 +33,20 @@ div.www
         padding: 10px;
         margin: 10px;
     }
+p.www
+    {
+        border: 1px dashed #7F3804;
+        line-height: 1.5em;
+        padding: 15px;
+        font-family: monospace;
+        font-style: normal;
+        font-weight: bold;
+        color: ;
+    }
+.hide
+    {
+        display: none;
+    }
 .aaa
     {
         text-decoration: underline;
