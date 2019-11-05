@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Работа с узлами</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_30.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Работа с узлами</h1>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див. Внутри него вначале находится просто текст, а затем span.
+		            <p class = "www">&lt;div> text &lt;span>span&lt;/span>&lt;/div></p>
+		            Получите первого потомка нашего дива с помощью firstChild и с помощью firstElementChild. Сравните результаты. 
+		        </p>
+		        <div id = "r1" class = "hide"> text <span>span</span></div>
+		        <button onclick = "f1();">Выполнить</button>
+		        <p>firstChild: <span id = "r1_1" class = "www"></span>.</p>
+		        <p>firstElementChild: <span id = "r1_2" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див. Внутри него вначале находится просто текст, а затем span.
+		            <br>
+		            <p class = "www">&lt;div> text &lt;span>span&lt;/span>&lt;/div></p>
+		            Выведите на экран находящийся в начале дива текст. 
+		        </p>
+		        <div id = "r2" class = "hide" hidden> text <span>span</span></div>
+		        <button onclick = "f2();">Выполнить</button>
+		        <p>Текст:<span id = "r2_1" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див. Внутри него вначале находится просто текст, а затем span.
+		            <br>
+		            <p class = "www">&lt;div> text &lt;span>span&lt;/span>&lt;/div></p>
+		            Поменяйте текст на восклицательный знак. 
+		        </p>
+		        <div id = "r3" class = "www"> text <span>span</span></div>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див. Внутри него вначале находится span, а затем просто текст.
+		            <br>
+		            <p class = "www">&lt;div>&lt;span>span&lt;/span> text &lt;/div></p>
+		            Поменяйте текст на восклицательный знак. 
+		        </p>
+		        <div id = "r4" class = "www"><span>span</span> text </div>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див с комментарием.
+		            <br>
+		            <p class = "www">&lt;div>&lt;!--comment-->&lt;span>span&lt;/span> text &lt;/div></p>
+		            Выведите на экран текст комментария.
+		        </p>
+		        <div  id = "r5" class = "hide"><!--comment--><span>span</span> text </div>
+		        <button onclick = "f5();">Выполнить</button>
+		        <p class = "hide">Текст комментария: <span id = "r5_1" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див с комментарием.
+		            <br>
+		            <p class = "www">&lt;div>&lt;!--comment-->&lt;span>span&lt;/span> text &lt;/div></p>
+		            Поменяйте текст комментария на восклицательный знак. 
+		        </p>
+		        <div id = "r6" class = "hide"><!--comment--><span>span</span> text </div>
+		        <button onclick = "f6();">Выполнить</button>
+		        <p class = "hide">Старый текст комментария: <span id = "r6_1" class = "www"></span>.</p>
+		        <p class = "hide">Новый текст комментария: <span id = "r6_2" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <h1>Разница между childNodes и children</h1>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <br>
+		            <p class = "www">&lt;div> 1 &lt;span>2&lt;/span> 3 &lt;span>4&lt;/span>&lt;/div></p>
+		            Переберите циклом всех потомков дива сначала через childNodes, а потом через children. 
+		        </p>
+		        <div id = "r7" class = "hide"> 1 <span>2</span> 3 <span>4</span></div>
+		        <button onclick = "f7();">Выполнить</button>
+		         <ul id = "r7_1" class = "www">childNodes:</ul>
+		        <ul id = "r7_2" class = "www">children: </ul>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div> 1 &lt;span>2&lt;/span> 3 &lt;span>4&lt;/span>&lt;/div></p>
+		            Выведите на экран содержимого второго (если начинать отсчет с единицы) узла-потомка нашего дива.
+		        </p>
+		        <div id = "r8" class = "hide"> 1 <span>2</span> 3 <span>4</span></div>
+		        <button onclick = "f8();">Выполнить</button>
+		        <p>Текст:<span id = "r8_1" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div> 1 &lt;span>2&lt;/span> 3 &lt;span>4&lt;/span>&lt;/div></p>
+		            Выведите на экран содержимого второго (если начинать отсчет с единицы) DOM-элемента-потомка нашего дива. 
+		        </p>
+		        <div id = "r9" class = "hide"> 1 <span>2</span> 3 <span>4</span></div>
+		        <button onclick = "f9();">Выполнить</button>
+		        <p>Текст:<span id = "r9_1" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div>&lt;span>1&lt;/span> 2 &lt;span>3&lt;/span>&lt;span>4&lt;/span> 5&lt;/div></p>
+		            Получите span с числом 3 внутри. Выведите на экран текст его правого и левого узла-соседа. 
+		        </p>
+		        <div id = "r10" class = "hide"><span>1</span> 2 <span>3</span><span>4</span> 5</div>
+		        <button onclick = "f10();">Выполнить</button>
+		        <p>Правый сосед:<span id = "r10_1" class = "www"></span>.</p>
+		        <p>Левый сосед:<span id = "r10_2" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div>&lt;span>1&lt;/span> 2 &lt;span>3&lt;/span>&lt;span>4&lt;/span> 5&lt;/div></p>
+		            Получите span с числом 3 внутри. Выведите на экран текст его правого и левого DOM-элемента-соседа. 
+		        </p>
+		        <div id = "r11" class = "hide"><span>1</span> 2 <span>3</span><span>4</span> 5</div>
+		        <button onclick = "f11();">Выполнить</button>
+		        <p>Правый сосед:<span id = "r11_1" class = "www"></span>.</p>
+		        <p>Левый сосед:<span id = "r11_2" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div> 1 &lt;span>2&lt;/span> 3 &lt;span>4&lt;/span> 5&lt;/div></p>
+		            Получите текстовый узел с числом 3 внутри. Выведите на экран текст его правого соседа. 
+		        </p>
+		        <div id = "r12" class = "hide"> 1 <span>2</span> 3 <span>4</span> 5</div>
+		        <button onclick = "f12();">Выполнить</button>
+		        <p>Правый сосед:<span id = "r12_1" class = "www"></span>.</p>
+		    </div>
+		    
+
+		    <h1>Работа с nodeType</h1>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div>&lt;!--comment-->&lt;span>span&lt;/span> text &lt;/div></p>
+		            Переберите циклом все его узлы, получите их текст, выведите текст на экран, а рядом с каждый текстом - тип соответствующего узла. 
+		        </p>
+		        <div id = "r13" class = "hide"><!--comment--><span>span</span> text </div>
+		        <button onclick ="f13();">Выполнить</button>
+		        <table id = "t13">
+		            <tr>
+		                <th>Текст</th>
+		                <th>Тип узла</th>
+		            </tr>
+		        </table>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div>&lt;!--comment-->&lt;span>&lt;b>bold&lt;/b>span&lt;/span> text &lt;/div></p>
+		            Переберите циклом все его узлы и выведите на экран для текстовых узлов и комментариев их текст, а для узлов-DOM-элементов - их innerHTML. 
+		        </p>
+		        <div class = "www" id = "r21"><!--comment--><span><b>bold</b>span</span> text </div>
+		        <button onclick = "f21();">Выполнить</button>
+		        <p id = "res21"></p>
+		    </div>
+		    
+		    
+		    <h1>nodeList и HTMLCollection</h1>
+		    
+
+		    <div class = "item div_elem">
+		        <div id = "r14">
+		            <p>Абзац 1</p>
+		            <p>Абзац 2</p>
+		            <p>Абзац 3</p>
+		            <p>Абзац 4</p>
+		            <p>Абзац 5</p>
+		        </div>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны абзацы. Получите их в виде NodeList. Вывод в консоль.
+		        </p>
+		        <button onclick = "f14();">Выполнить</button>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны абзацы. Получите их в виде HTMLCollection. Вывод в консоль.
+		        </p>
+		        <button onclick = "f15();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны абзацы. Получите их в виде NodeList, а затем преобразуйте этот NodeList в массив. Вывод в консоль.
+		        </p>
+		        <button onclick = "f16();">Выполнить</button>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны абзацы. Получите их в виде HTMLCollection, а затем преобразуйте этот HTMLCollection в массив. Вывод в консоль.
+		        </p>
+		        <button onclick = "f17();">Выполнить</button>
+		    </div>
+		    
+
+		    <h1>Метод createTextNode и удаление текстовых узлов</h1>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div>&lt;span>span&lt;/span> text &lt;/div></p>
+		            Вставьте перед span текст '!!!', создав его предварительно как текстовый узел с помощью createTextNode. 
+		        </p>
+		        <div class = "www" id = "r18"><span>span</span> text </div>
+		        <button onclick = "f18();">Выполнить</button>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div> text &lt;span>span&lt;/span>&lt;/div></p>
+		            Вставьте после слова text новый текстовый узел с текстом '!!!'. 
+		        </p>
+		        <div class = "www" id = "r19"> text <span>span</span></div>
+		        <button onclick = "f19();">Выполнить</button>
+		    </div>
+		    
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан див.
+		            <p class = "www">&lt;div> text &lt;span>span&lt;/span>&lt;/div></p>
+		            Удалите из него текстовый узел ' text '.
+		        </p>
+		        <div class = "www" id = "r20"> text <span>span</span></div>
+		        <button onclick = "f20();">Выполнить</button>
+		    </div>	    
+		</div>
+	</body>
+</html>
