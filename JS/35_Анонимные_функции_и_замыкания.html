@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Работа с узлами</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_35.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Анонимные функции и замыкания</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Если переменная a больше нуля - то в функцию запишем функцию, которая выводит один !, иначе запишем функцию, которая выводит два !.
+		        </p>
+		        <input type = "number" placeholder = "Введите 'a'" onchange = "f1(this.value);">
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Функция принимает 2 параметра: число и анонимную функцию, которая возводит число в квадрат. Возведите число в 4-тую степень с помощью функции.
+		        </p>
+		        <input type = "number" placeholder = "Введите число" onchange = "f2(this.value);">
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Функция ggg принимает 2 параметра: анонимную функцию, которая возвращает 3 и анонимную функцию, которая возвращает 4. Верните результатом функции ggg сумму 3 и 4.
+		        </p>
+		        <button onclick = "alert(f3(a3, b3));">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана функция. Она требует первым параметром число, вторым функцию, которая возводит в квадрат, а третьим параметром функцию, которая возводит в куб. Эти функции есть как Function Declaration. Пусть функция вернет сумму квадрата и куба числа.
+		        </p>
+		        <input type = "number" placeholder = "Введите число" onchange = "alert(f4(this.value, sq4, cube4));">
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте функцию, которая первым параметром принимает массив, а вторым - функцию, которая применится к каждому элементу массива. Функция each должна вернуть измененный массив.
+		            <br>
+		            <b>Исходный массив чисел: </b>[4, 6, 8]
+		        </p>
+		        <button onclick = "alert(f5([4, 6, 8], funcArr5));">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте функцию, которая первым параметром принимает массив, а вторым - массив функций, которые по очереди применятся к каждому элементу массива: к первому элементу массива - первая функция, ко второму - вторая и так далее пока функции в массиве не закончатся, после этого возьмется первая функция, вторая и так далее по кругу.
+		                <br>
+		                <b>Исходный массив чисел: </b>[23, 4, 8, 13, 8, 7, 11]
+		        </p>
+		        <button onclick = "alert(f6([23, 4, 8, 13, 8, 7, 11], funcArr6));">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте функцию, которая считает и выводит количество своих вызовов. <b>Вывод в консоль</b>.
+		        </p>
+		        <button onclick = "f7();">Считать</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны кнопки. Привяжите к каждой кнопке событие по клику, которое будет считать количество нажатий по кнопке и выводить его в текст кнопки. Количество нажатий для каждой кнопки должно хранится в замыкании.
+		        </p>
+		        <button class = "btn_8">0</button>
+		        <button class = "btn_8">0</button>
+		        <button class = "btn_8">0</button>
+		        <button class = "btn_8">0</button>
+		        <button class = "btn_8">0</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив цветов. Даны абзацы. По первому нажатию на абзац он должен покраситься в первый цвет из массива, по второму нажатию - во второй и так далее. Все абзацы работают независимо.
+		        </p>
+		        <p class = "colored">Это цветной параграф.</p>
+		        <p class = "colored">Это цветной параграф.</p>
+		        <p class = "colored">Это цветной параграф.</p>
+		        <p class = "colored">Это цветной параграф.</p>
+		        <p class = "colored">Это цветной параграф.</p>
+		        <p class = "colored">Это цветной параграф.</p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны кнопки. Каждая кнопка по нажатию на нее выводить следующее число Фибоначчи. Кнопки работают независимо. Решить через замыкания.
+		        </p>
+		        <button class = "btn_10">Следующее число</button><span></span>
+		        <br>
+		        <button class = "btn_10">Следующее число</button><span></span>
+		        <br>
+		        <button class = "btn_10">Следующее число</button><span></span>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны инпуты. Сделайте так, чтобы каждый инпут хранил историю своих изменений. Каждый инпут свою. Изменением считается событие onchange. История должна хранится в замыкании. Над каждым инпутом должны быть стрелочки назад и вперед, с помощью которых можно передвигаться по истории.
+		        </p>
+		        <button class = "prew">&lt;</button><input class = "i11" type = "text"><button class = "next">&gt;</button>
+		        <br>
+		        <button class = "prew">&lt;</button><input class = "i11" type = "text"><button class = "next">&gt;</button>
+		        <br>
+		        <button class = "prew">&lt;</button><input class = "i11" type = "text"><button class = "next">&gt;</button>
+		        <br>
+		        <button class = "prew">&lt;</button><input class = "i11" type = "text"><button class = "next">&gt;</button>
+		        <br>
+		        <button class = "prew">&lt;</button><input class = "i11" type = "text"><button class = "next">&gt;</button>
+		        <br>
+		        <button class = "prew">&lt;</button><input class = "i11" type = "text"><button class = "next">&gt;</button>
+		        <br>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте функцию, каждый вызов который будет генерировать случайные числа от 1 до 100, но так, чтобы они не повторялись, пока не будут перебраны все числа из этого промежутка. Решите задачу через замыкания - в замыкании должен хранится массив чисел, которые уже были сгенерированы функцией.
+		            <b>Вывод в консоль.</b>
+		        </p>
+		        <button onclick = "btn12();">Выполнить</button>
+		    </div>
+		</div>
+	</body>
+</html>
