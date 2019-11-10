@@ -131,3 +131,11 @@ div.img
     {
         background-color: #f29da3;
     }
+.colored
+    {
+        font-weight: bold;
+    }
+.colored:hover
+    {
+        cursor: pointer;
+    }
