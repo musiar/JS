@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Методы для работы с массивами</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_36.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>На forEach</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Создайте новый массив, состоящий из квадратов этих чисел.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_1">
+		        <button onclick = "f1();">Выполнить</button>
+		        <p>Массив квадратов: <span id = "r1" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Найдите сумму этих чисел.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_2">
+		        <button onclick = "f2();">Выполнить</button>
+		        <p>Сумма чисел: <span id = "r2" class = "www">?</span></p>
+		    </div>
+		    
+		    <h1>На map</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Сделайте из него массив, состоящий из квадратов этих чисел. 
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_3">
+		        <button onclick = "f3();">Выполнить</button>
+		        <p>Массив квадратов: <span id = "r3" class = "www">?</span></p>
+		    </div>
+		    
+		    <h1>На every, some</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Проверьте то, что все элементы в массиве больше нуля.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_4">
+		        <button onclick = "f4();">Выполнить</button>
+		        <p>Все элементы больше нуля: <span id = "r4" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Проверьте то, что в нем есть отрицательные элементы.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_5">
+		        <button onclick = "f5();">Выполнить</button>
+		        <p>Отрицательные числа в массиве: <span id = "r5" class = "www">?</span></p>
+		    </div>
+		    
+		    <h1>На filter</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Оставьте в нем только отрицательные числа.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_6">
+		        <button onclick = "f6();">Выполнить</button>
+		        <p>Отрицательные: <span id = "r6" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Оставьте в нем только четные числа.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_7">
+		        <button onclick = "f7();">Выполнить</button>
+		        <p>Четные: <span id = "r7" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив со строками. Оставьте в нем только те строки, длина которых больше 5-ти символов.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_8">
+		        <button onclick = "f8();">Выполнить</button>
+		        <p>Четные: <span id = "r8" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив, в нем могут быть обычные элементы и подмассивы, например [1, 2, [3, 4], 5, [6, 7]]. Оставьте в нем только подмассивы.
+		        </p>
+		        <button onclick = "f9();">Выполнить</button>
+		        <p>Подмассивы: <span id = "r9" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Посчитайте количество отрицательных чисел в этом массиве.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_10">
+		        <button onclick = "f10();">Выполнить</button>
+		        <p>Количество отрицательных: <span id = "r10" class = "www">?</span></p>
+		    </div>
+		    
+		    <h1>На reduce, reduceRight</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Найдите сумму этих чисел.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_11">
+		        <button onclick = "f11();">Выполнить</button>
+		        <p>Сумма: <span id = "r11" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Найдите сумму первых N элементов до первого нуля. Пример: [1, 2, 3, 0, 4, 5, 6] - суммируем первые 3 элемента, так как дальше стоит элемент с числом 0.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_12">
+		        <button onclick = "f12();">Выполнить</button>
+		        <p>Сумма: <span id = "r12" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Найдите сумму последних N элементов до первого нуля с конца. Пример: [1, 2, 3, 0, 4, 5, 6] - суммируем последние 3 элемента, так как дальше стоит элемент с числом 0.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_13">
+		        <button onclick = "f13();">Выполнить</button>
+		        <p>Сумма: <span id = "r13" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_14">
+		        <button onclick = "f14();">Выполнить</button>
+		        <p>Количество чисел: <span id = "r14" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Узнайте сколько элементов с конца массива надо сложить, чтобы в сумме получилось больше 10-ти.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_15">
+		        <button onclick = "f15();">Выполнить</button>
+		        <p>Количество чисел: <span id = "r15" class = "www">?</span></p>
+		    </div>
+		    
+		    <h1>Закрепление</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. Оставьте в нем только положительные числа. Затем извлеките квадратный корень и этих чисел.
+		        </p>
+		        <input type = "text" placeholder = "Введите числа через запятую" id = "inp_16">
+		        <button onclick = "f16();">Выполнить</button>
+		        <p>Результат: <span id = "r16" class = "www">?</span></p>
+		    </div>
+		</div>
+	</body>
+</html>
