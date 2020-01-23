@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Практика ES6</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_41.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Практика ES6</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            При двойном нажатии на инпут выводить его порядковый номер.
+		        </p>
+		        <div id = "r1">
+		            <input type = "text" maxlength = "30"><br>
+		            <input type = "text" maxlength = "30"><br>
+		            <input type = "text" maxlength = "30"><br>
+		            <input type = "text" maxlength = "30"><br>
+		        </div>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создать функцию для выбора максимального значения массива, используя Math.max() и spread.
+		        </p>
+		        <input type = "text" maxlength = "100" id = "r2" placeholder = "Введите числа через запятую">
+		        <button onclick = "f2();">Выполнить</button>
+		        <p>Максимальное: <span id = "r2max" class = "www">?</span></p>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью деструктуризации поменять значения инпутов местами.
+		        </p>
+		        <div id = "r3">
+		            <p>
+		                Значение <span class = "www">a</span>: <input type = "text" maxlength = "100" placeholder = "Введите значение">
+		            </p>
+		            <p>
+		                Значение <span class = "www">b</span>: <input type = "text" maxlength = "100" placeholder = "Введите значение">
+		            </p>
+		            <p>
+		                Значение <span class = "www">c</span>: <input type = "text" maxlength = "100" placeholder = "Введите значение">
+		            </p>
+		        </div>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создать слайдер, используя деструктуризацию.
+		        </p>
+		        <div id = "r4">
+		            <img src = "https://images.ru.prom.st/461019146_w200_h200_kartina-raskraska-po.jpg">
+		            <img src = "https://img.feebee.com.tw/ip/200/r2_siYGkWC76DDUns-sqyf0BLMLVabvOdJgP6F1V-PM=/https://s.yimg.com/ut/api/res/1.2/8RhF5ZFhnakety5PpP6fWA--~B/dz02MDA7aD02MDA7cT04MTtmaT1maXQ7YXBwaWQ9eXR3bWFsbA--/https://s.yimg.com/fy/08e2/item/p0220157246109-item-0e35xf4x0400x0320-m.jpg">
+		            <img src = "http://samp.waptrick.org/samp/w/200x160/79894.jpg">
+		            <img src = "https://static.my-shop.ru/product/2/377/3769167.jpg">
+		            <img src = "http://samp.waptrick.org/samp/w/200x160/81614.jpg">
+		            <img src = "http://data18.i.gallery.ru/albums/gallery/353571-257f7-71557858-200-u4a16d.jpg">
+		        </div>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Поменять элементы в массиве местами попарно.
+		        </p>
+		        <input type = "text" maxlength = "100" id = "r5" placeholder = "Введите значения через запятую">
+		        <p>Итоговый массив: <span id = "r5arr" class = "www">?</span></p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Реализовать с помощью Es6 функцию, сливающую переданные массивы в двухмерный массив. 
+		            <br>
+		            Массивы: [1,2,3], [4,5,6] и [7,8,9].
+		            <br>
+		            <b>Вывод результата в консоль.</b>
+		        </p>
+		        
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Найти пересечение любого количества массивов на ES6
+		        </p>
+		        <div id = "r7">
+		            <p>
+		                Массив №1: <input type = "text" maxlength = "100" placeholder = "Введите значения через запятую">
+		            </p>
+		            <p>
+		                Массив №2: <input type = "text" maxlength = "100" placeholder = "Введите значения через запятую">
+		            </p>
+		            <p>
+		                Массив №3: <input type = "text" maxlength = "100" placeholder = "Введите значения через запятую">
+		            </p>
+		        </div>
+		        <button onclick = "f7();">Выполнить</button>
+		        <p>Пересечение: <span id = "res7" class = "www">?</span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		           Реализовать функцию, сливающую произвольное количество массивов в один.
+		        </p>
+		        <div id = "r8">
+		            <p>
+		                Массив №1: <input type = "text" maxlength = "100" placeholder = "Введите значения через запятую">
+		            </p>
+		            <p>
+		                Массив №2: <input type = "text" maxlength = "100" placeholder = "Введите значения через запятую">
+		            </p>
+		            <p>
+		                Массив №3: <input type = "text" maxlength = "100" placeholder = "Введите значения через запятую">
+		            </p>
+		        </div>
+		        <button onclick = "f8();">Выполнить</button>
+		        <p>Результат: <span id = "res8" class = "www">?</span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		           Получить сумму элементов массива (первый сложить с последним, второй - с предпоследним и т.д.).
+		        </p>
+		        Массив: <input type = "text" maxlength = "100" placeholder = "Введите числа через запятую" id = "r9">
+		        <button onclick = "f9();">Выполнить</button>
+		        <p>Результат: <span id = "res9" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		           Отсортировать массив чисел по возрастанию, используя стрелочную функцию.
+		        </p>
+		        Массив: <input type = "text" maxlength = "100" placeholder = "Введите числа через запятую" id = "r10">
+		        <button onclick = "f10();">Выполнить</button>
+		        <p>Результат: <span id = "res10" class = "www">?</span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Удалить дубли из массива, используя коллекцию Set.
+		        </p>
+		        Массив: <input type = "text" maxlength = "100" placeholder = "Введите числа через запятую" id = "r11">
+		        <button onclick = "f11();">Выполнить</button>
+		        <p>Результат: <span id = "res11" class = "www">?</span></p>
+		    </div>
+		</div>
+	</body>
+</html>
