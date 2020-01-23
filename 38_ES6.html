@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ES 6</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_38.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Задачи на деструктуризацию</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив. Запишите первый элемент этого массива в переменную elem1, второй - в переменную elem2, третий - в переменную elem3, а все остальные элементы массива - в переменную arr.
+		        </p>
+		        <p>Результат: <span id = "r1" class = "www"></span></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив. Запишите последний элемент этого массива в переменную elem1, а предпоследний - в переменную elem2. 
+		        </p>
+		        <p>Результат: <span id = "r2" class = "www"></span></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив. Запишите второй элемент этого массива в переменную elem2. Первый элемент никуда записывать не надо.
+		        </p>
+		        <p>Результат: <span id = "r3" class = "www"></span></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив. Запишите второй элемент этого массива в переменную elem2, третий - в переменную elem3. Если в массиве нет третьего элемента - запишите в переменную elem3 значение 'eee', а если нет второго - в переменную elem2 запишите значение 'bbb'. Первый элемент никуда записывать не надо.
+		        </p>
+		        <p>Результат: <span id = "r4" class = "www"></span></p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан объект {name: 'Петр', 'surname': 'Петров', 'age': '20 лет'}. Запишите соответствующие значения в переменные name, surname и age.
+		        </p>
+		        <p>Результат: <span id = "r5" class = "www"></span></p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан объект {name: 'Петр', 'surname': 'Петров', 'age': '20 лет', }. Запишите соответствующие значения в переменные name, surname и age. Сделайте так, чтобы, если какое-то значение не задано - оно принимало следующее значение по умолчанию: {name: 'Аноним', 'surname': 'Анонимов', 'age': '? лет'}.
+		        </p>
+		        <p>Результат: <span id = "r6" class = "www"></span></p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Задачи на итераторы</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив, выведите его элементы последовательно на экран. 
+		        </p>
+		        <p>Результат: <span id = "r7" class = "www"></span></p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив, выведите его элементы последовательно на экран в обратном порядке (подсказка: сначала перевернем массив через reverse).
+		        </p>
+		        <p>Результат: <span id = "r8" class = "www"></span></p>
+		        <button onclick = "f8();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами, найдите сумму элементов этого массива.
+		        </p>
+		        <p>Результат: <br><span id = "r9" class = "www"></span></p>
+		        <button onclick = "f9();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка. С помощью for-of подсчитайте количество букв 'о' в ней.
+		        </p>
+		        <input id = "txt10" type = "text" max = "30" placeholder = "Введите строку">
+		        <p>Результат: <span id = "r10" class = "www"></span></p>
+		        <button onclick = "f10();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <h1>Задачи на функции</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Сделайте функцию, которая получает имя пользователя и выводит на экран 'Привет, Имя' (вместо Имя - полученное параметром имя). По умолчанию (то есть если не передать параметр) функция должна выводить 'Привет, Аноним'. 
+		        </p>
+		        <p>Как тебя зовут? <br>
+		            <button onclick = "f11('Вася');">Вася</button>
+		            <button onclick = "f11('Петя');">Петя</button>
+		            <button onclick = "f11();">Не скажу</button>
+		        </p>
+		        
+		        <p>Результат: <span id = "r11" class = "www"></span></p>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан объект с настройками, например, {id: 'elem', color: 'blue', border: '1px solid red', font: '15px Arial'}. Сделайте функцию, которая получает этот объект, извлекает из него все настройки в соответствующие переменные и для элемента с указанным id (в нашем случае это 'elem') ставит заданные CSS свойства. В объекте могут быть только эти ключи, однако, какой-либо ключ (кроме id) может быть не задан - в этом случае пусть возьмутся следующие значения по умолчанию: color: 'blue', border: '1px solid red', font: '15px Arial'.
+		        </p>
+		        <p id = "r12" class = "www">Это абзац!</p>
+		        <button onclick = "f12({id: 'r12', color: 'blue', background: 'yellow'});">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны абзацы с числами. Сделайте так, чтобы по нажатию на абзац увеличивалось на единицу число в этом абзаце. По нажатию на другой абзац должно происходить то же самое - он тоже увеличивается на единицу.
+		        </p>
+		        <p class = "www r13">0</p>
+		        <p class = "www r13">0</p>
+		        <p class = "www r13">0</p>
+		        <p class = "www r13">0</p>
+		        <p class = "www r13">0</p>
+		    </div>
+
+		    
+		</div>
+	</body>
+</html>
