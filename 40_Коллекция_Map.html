@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Коллекция Map</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_40.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Коллекции Map и WeakMap</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Пусть даны 3 массива. Создайте коллекцию Map, сделайте ключами коллекции эти массивы, а значениями - какие-нибудь строки. <b>Вывод результата в консоль.</b>
+		        </p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Переберите циклом for-of коллекцию, созданную в предыдущей задаче. <b>Вывод результата в консоль.</b></p>
+		        <p>
+		            <b>Доступно после выполнения первой задачи.</b>
+		        </p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Пусть дана коллекция Map. С помощью метода keys получите массив ее ключей и переберите его циклом for-of. 
+		            <b>Вывод результата в консоль.</b>
+		        </p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Пусть дана коллекция Map. С помощью метода values получите массив ее значений и переберите его циклом for-of.
+		            <b>Вывод результата в консоль.</b>
+		        </p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Пусть дана коллекция Map. С помощью свойства size узнайте количество элементов в этой коллекции.
+		            <b>Вывод результата в консоль.</b>
+		        </p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Применение к DOM</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Пусть даны абзацы. Переберите эти абзацы циклом и создайте коллекцию Map, ключами в которой будут абзацы, а значением - их порядковый номер на странице. Сделайте так, чтобы по клику на любой абзац ему в конец записывался его порядковый номер.
+		        </p>
+		        <div id = "r6">
+		            <p>Вот</p>
+		            <p>Эти</p>
+		            <p>абзацы</p>
+		            <p>!!!</p>
+		        </div>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Практика</h1>
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            История инпутов с помощью Map.
+		        </p>
+		        <div id = "r7">
+		            <input type = "text" maxlength = "30" placeholder = "Введите текст"><br>
+		            <input type = "text" maxlength = "30" placeholder = "Введите текст"><br>
+		            <input type = "text" maxlength = "30" placeholder = "Введите текст"><br>
+		            <input type = "text" maxlength = "30" placeholder = "Введите текст"><br>
+		        </div>
+		    </div> 
+		</div>
+	</body>
+</html>
