@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Коллекция Set</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_39.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>Основы работы с коллекциями Set</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте пустую коллекцию Set. С помощью метода add добавьте в нее элементы со значениями 1, 2 и 3.
+		        </p>
+		        <p>Результат: <span id = "r1" class = "www"></span></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте коллекцию Set с начальными значениями 1,2,3. С помощью свойства size выведите на экран количество элементов в коллекции.
+		        </p>
+		        <p>Результат: <span id = "r2" class = "www"></span></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте коллекцию Set с начальными значениями 1,2,3. С помощью метода has проверьте наличие элемента со значением 3, а затем элемента со значением 4.
+		        </p>
+		        <p id = "r3" class = "www"></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Создайте коллекцию Set с начальными значениями 1,2,3. С помощью метода add добавьте в коллекцию еще одно число 2. Выведите содержимое коллекции в консоль, убедитесь, что число 2 не добавилось второй раз.
+		            <b>Вывод в консоль.</b>
+		        </p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив с числами. С помощью цикла и метода add добавьте все элементы этого массива в коллекцию Set.
+		            <b>Вывод в консоль.</b>
+		        </p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Модифицируйте предыдущую задачу так, чтобы в коллекцию добавлялись только четные числа из массива, а нечетные - игнорировались. <b>Вывод в консоль.</b>
+		        </p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана коллекция Set со значениями 1,2,3. С помощью цикла for-of переберите ее значения.
+		            <b>Вывод в консоль.</b>
+		        </p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана коллекция Set с некоторыми числовыми значениями. Найдите сумму этих значений.
+		        </p>
+		        <p>Результат: <span id = "r8" class = "www"></span></p>
+		        <button onclick = "f8();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Практика</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан массив. С помощью Set получите этот же массив, но без дублей.
+		            <b>Вывод в консоль.</b>
+		        </p>
+		        <button onclick = "f9([2, 5, 2, 6, 9, 8, 2, 8]);">Выполнить</button>
+		    </div>
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дан инпут и кнопка. Пользователь вводит в инпут число и жмет на кнопку и делает так произвольное количество раз. Сделайте так, чтобы каждый раз под инпутом в абзац через запятую выводился список всех введенных пользователем чисел, но без дублей.
+		        </p>
+		        <input type = "number" id = "txt10">
+		        <button onclick = "counter10();">Выполнить</button>
+		        <p id = "r10" class = "www"></p>
+		    </div>
+		    
+		    
+		    <h1>DOM элементы</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Даны абзацы и кнопка. Пользователь кликает на эти абзацы в произвольном порядке. Сделайте так, чтобы по нажатию на кнопку в конец каждого абзаца, на который был совершен клик, был добавлен восклицательный знак.
+		        </p>
+		        
+		        <p class = "p11 www">Это</p>
+		        <p class = "p11 www">просто</p>
+		        <p class = "p11 www">текст</p>
+		        <p class = "p11 www">и</p>
+		        <p class = "p11 www">ещё</p>
+		        <p class = "p11 www">немного</p>
+		        <button id = "btn11">выполнить</button>
+		    </div>
+		</div>
+	</body>
+</html>
