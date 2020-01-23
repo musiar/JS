@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Регулярные выражения (4)</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_45.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>На позитивный и негативный просмотр</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью позитивного и негативного просмотра найдите все строки по шаблону <b>aaa</b>, затем <b>b</b> и поменяйте <b>aaa</b> на '<b>!</b>'. То есть из '<b>aaab</b>' нужно сделать '<b>!b</b>'.
+		            <br>
+		            Строка '<b>aaab aaac aaag aaab aaat</b>'.
+		        </p>
+		        <p>Результат: <span id = "r1" class = "www"></span></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью позитивного и негативного просмотра найдите все строки по шаблону <b>aaa</b>, затем любая буква, но <b>не b</b> и поменяйте <b>aaa</b> на '<b>!</b>'. То есть из, к примеру, '<b>aaaw</b>' нужно сделать '<b>!w</b>', а '<b>aaab</b>' не поменяется.
+		            <br>
+		            Строка '<b>aaab aaac aaag aaab aaat</b>'.
+		        </p>
+		        
+		        <p>Результат: <span id = "r2" class = "www"></span></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На replace</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка с целыми числами. С помощью регулярки преобразуйте строку так, чтобы вместо этих чисел стояли их квадраты.
+		        </p>
+		        <input type = "text" maxlength = "50" id = "txt3" placeholder = "Введите текст">
+		        <button onclick = "f3();">Выполнить</button>
+		        <p>Результат: <span id = "r3" class = "www"></span></p>
+		        
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка с целыми числами. Найдите числа, стоящие в кавычках и увеличьте их в два раза. Пример: из строки 2aaa'3'bbb'4' сделаем строку 2aaa'6'bbb'8'.
+		        </p>
+		        <input type = "text" id = "txt4" placeholder = "Введите текст">
+		        <button onclick = "f4();">Выполнить</button>
+		        <p>Результат: <span id = "r4" class = "www"></span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка в которой есть вставки {{текст}}. Найдите все такие вставки и поменяйте в них порядок букв на обратный (то есть из 'текст' нужно сделать 'тскет').
+		        </p>
+		        <input type = "text" id = "txt5" placeholder = "Введите текст">
+		        <button onclick = "f5();">Выполнить</button>
+		        <p>Результат: <span id = "r5" class = "www"></span></p>
+		        
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '23 + 35 ='. Числа могут быть любыми. Выведите на экран результат операции в виде '23 + 35 = 58'.
+		        </p>
+		        <input type = "text" id = "txt6" placeholder = "Введите текст">
+		        <button onclick = "f6();">Выполнить</button>
+		        <p>Результат: <span id = "r6" class = "www"></span></p>
+		        
+		    </div>
+		    
+		    <h1>Задачи</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Определите, что год находится в интервале от 1900 до 2100 с помощью одного только регулярного выражения.
+		        </p>
+		        <input type = "number" id = "txt7" placeholder = "Введите число">
+		        <button onclick = "f7();">Выполнить</button>
+		        <p>Результат: <span id = "r7" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка является корректным временем вида '12:59', '23:41', '00:12', '00:00', '09:15'. Время '24.00', '25.00', '12.60', '12.93', '41.93' является некорректным.
+		        </p>
+		        <input type = "text" id = "txt8" placeholder = "Введите текст">
+		        <button onclick = "f8();">Выполнить</button>
+		        <p>Результат: <span id = "r8" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка является корректным временем вида '9.59 am', '12.30 pm'.
+		        </p>
+		        <input type = "text" id = "txt9" placeholder = "Введите текст">
+		        <button onclick = "f9();">Выполнить</button>
+		        <p>Результат: <span id = "r9" class = "www"></span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Удалите одной регуляркой все слова из предложения, содержащие две одинаковые следующие друг за другом буквы (не содержит кириллицу).
+		        </p>
+		        <input type = "text" id = "txt10" placeholder = "Введите текст">
+		        <button onclick = "f10();">Выполнить</button>
+		        <p>Результат: <span id = "r10" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Удалите одной регуляркой все повторяющиеся слова из строки, например для 'dsf xxx xxx sd' должно вернуть 'dsf xxx sd'.
+		        </p>
+		        <input type = "text" id = "txt11" placeholder = "Введите текст">
+		        <button onclick = "f11();">Выполнить</button>
+		        <p>Результат: <span id = "r11" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Решите предыдущую задачу с учетом того, что слово может повторяться много раз. Например 'dsf xxx xxx xxx xxx xxx sd' должно вернуть 'dsf xxx sd'
+		        </p>
+		        <input type = "text" id = "txt12" placeholder = "Введите текст">
+		        <button onclick = "f12();">Выполнить</button>
+		        <p>Результат: <span id = "r12" class = "www"></span></p>
+		    </div>   
+		</div>
+	</body>
+</html>

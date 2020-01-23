@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Регулярные выражения (2)</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_43.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>На {}</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aa aba abba abbba abbbba abbbbba</b>'. Напишите регулярку, которая найдет строки <b>abba</b>, <b>abbba</b>, <b>abbbba</b> и только их.
+		        </p>
+		        <p>Результат: <span id = "r1" class = "www"></span></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aa aba abba abbba abbbba abbbbba</b>'. Напишите регулярку, которая найдет строки вида <b>aba</b>, в которых '<b>b</b>' встречается <b>менее 3-х раз</b> (включительно).
+		        </p>
+		        <p>Результат: <span id = "r2" class = "www"></span></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aa aba abba abbba abbbba abbbbba</b>'. Напишите регулярку, которая найдет строки вида <b>aba</b>, в которых '<b>b</b>' встречается <b>более 4-х раз</b> (включительно).
+		        </p>
+		        <p>Результат: <span id = "r3" class = "www"></span></p>
+		        <button onclick = "f3();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На \s, \S, \w, \W, \d, \D</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>a1a a2a a3a a4a a5a aba aca</b>'. Напишите регулярку, которая найдет строки, в которых по краям стоят буквы '<b>a</b>', а между ними <b>одна цифра</b>.
+		        </p>
+		        <p>Результат: <span id = "r4" class = "www"></span></p>
+		        <button onclick = "f4();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>a1a a22a a333a a4444a a55555a aba aca</b>'. Напишите регулярку, которая найдет строки, в которых по краям стоят буквы '<b>a</b>', а между ними любое количество цифр.
+		        </p>
+		        <p>Результат: <span id = "r5" class = "www"></span></p>
+		        <button onclick = "f5();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aa a1a a22a a333a a4444a a55555a aba aca</b>'. Напишите регулярку, которая найдет строки, в которых по краям стоят буквы '<b>a</b>', а между ними любое количество цифр (в том числе и ноль цифр, то есть строка '<b>aa</b>').
+		        </p>
+		        <p>Результат: <span id = "r6" class = "www"></span></p>
+		        <button onclick = "f6();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>avb a1b a2b a3b a4b a5b abb acb</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>' и '<b>b</b>', а между ними - не число.
+		        </p>
+		        <p>Результат: <span id = "r7" class = "www"></span></p>
+		        <button onclick = "f7();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>ave a#b a2b a$b a4b a5b a-b acb</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>' и '<b>b</b>', а между ними - не буква и не цифра.
+		        </p>
+		        <p>Результат: <span id = "r8" class = "www"></span></p>
+		        <button onclick = "f8();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>ave a#a a2a a$a a4a a5a a-a aca</b>'. Напишите регулярку, которая заменит все пробелы на '<b>!</b>'.
+		        </p>
+		        <p>Результат: <span id = "r9" class = "www"></span></p>
+		        <button onclick = "f9();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На [], '^' - не, [a-zA-Z], кириллицу</h1>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aba aea aca aza axa</b>'. Напишите регулярку, которая найдет строки <b>aba</b>, <b>aea</b>, <b>axa</b>, не затронув остальных.
+		        </p>
+		        <p>Результат: <span id = "r10" class = "www"></span></p>
+		        <button onclick = "f10();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aba aea aca aza axa a.a a+a a*a</b>'. Напишите регулярку, которая найдет строки <b>aba</b>, <b>a.a</b>, <b>a+a</b>, <b>a*a</b>, не затронув остальных.
+		        </p>
+		        <p>Результат: <span id = "r11" class = "www"></span></p>
+		        <button onclick = "f11();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>a5a a1a aca aza axa a6a a3a aba</b>'.
+		            Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - цифра от 3-х до 7-ми.
+		        </p>
+		        <p>Результат: <span id = "r12" class = "www"></span></p>
+		        <button onclick = "f12();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aba aga aca aza axa aaa ata ama</b>'.
+		            Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - буква от <b>a</b> до <b>g</b>. 
+		        </p>
+		        <p>Результат: <span id = "r13" class = "www"></span></p>
+		        <button onclick = "f13();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aba aga aca aza axa aaa ata ama aha aja apa ara</b>'.
+		            Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - буква от <b>a</b> до <b>f</b> и от <b>j</b> до <b>z</b>.
+		        </p>
+		        <p>Результат: <span id = "r14" class = "www"></span></p>
+		        <button onclick = "f14();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aba aga aJa aza axa aaa aLa ama aha aja aTa ara</b>'.
+		            Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - буква от <b>a</b> до <b>f</b> и от <b>A</b> до <b>Z</b>.
+		        </p>
+		        <p>Результат: <span id = "r15" class = "www"></span></p>
+		        <button onclick = "f15();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>apa aea aca aba ata</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - не '<b>e</b>' и не '<b>x</b>'.
+		        </p>
+		        <p>Результат: <span id = "r16" class = "www"></span></p>
+		        <button onclick = "f16();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>wйw wiw wЯw wёw wqw</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>w</b>', а между ними - буква кириллицы.
+		        </p>
+		        <p>Результат: <span id = "r17" class = "www"></span></p>
+		        <button onclick = "f17();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На [a-zA-Z] и квантификаторы</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aAXa aeffa aGha aza ax23a a3sSa</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - <b>маленькие латинские буквы</b>, не затронув остальных.
+		        </p>
+		        <p>Результат: <span id = "r18" class = "www"></span></p>
+		        <button onclick = "f18();">Выполнить</button>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aAXa aeffa aGha aza ax23a a3sSa</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - <b>маленькие</b> и <b>большие латинские буквы</b>, не затронув остальных.
+		        </p>
+		        <p>Результат: <span id = "r19" class = "www"></span></p>
+		        <button onclick = "f19();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aAXa aeffa aGha aza ax23a a3sSa</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - <b>маленькие латинские буквы</b> и <b>цифры</b>, не затронув остальных.
+		        </p>
+		        <p>Результат: <span id = "r20" class = "www"></span></p>
+		        <button onclick = "f20();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>ааа ббб ёёё ззз ййй ААА БББ ЁЁЁ ЗЗЗ ЙЙЙ</b>'. Напишите регулярку, которая найдет все слова по шаблону: любая кириллическая буква любое количество раз.
+		        </p>
+		        <p>Результат: <span id = "r21" class = "www"></span></p>
+		        <button onclick = "f21();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На '^', '$'</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aaa aaa aaa</b>'. Напишите регулярку, которая заменит первое '<b>aaa</b>' на '<b>!</b>'.
+		        </p>
+		        <p>Результат: <span id = "r22" class = "www"></span></p>
+		        <button onclick = "f22();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aaa aaa aaa</b>'. Напишите регулярку, которая заменит последнее '<b>aaa</b>' на '<b>!</b>'.
+		        </p>
+		        <p>Результат: <span id = "r23" class = "www"></span></p>
+		        <button onclick = "f23();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На '|'</h1>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aeeea aeea aea axea axa axxa axxxa</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - или буква '<b>e</b>' любое количество раз или по краям стоят буквы '<b>a</b>', а между ними - буква '<b>x</b>' любое количество раз.
+		        </p>
+		        <p>Результат: <span id = "r24" class = "www"></span></p>
+		        <button onclick = "f24();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>aeeea aeea aea axa axxa axxxa</b>'. Напишите регулярку, которая найдет строки следующего вида: по краям стоят буквы '<b>a</b>', а между ними - или буква '<b>e</b>' два раза или буква '<b>x</b>' любое количество раз.
+		        </p>
+		        <p>Результат: <span id = "r25" class = "www"></span></p>
+		        <button onclick = "f25();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На обратный слеш</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>a\a abc</b>'. Напишите регулярку, которая заменит строку '<b>a\a</b>' на '<b>!</b>'.
+		        </p>
+		        <p>Результат: <span id = "r26" class = "www"></span></p>
+		        <button onclick = "f26();">Выполнить</button>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>a\a a\\a a\\\a</b>'. Напишите регулярку, которая заменит строку '<b>a\\\a</b>' на '<b>!</b>'.
+		        </p>
+		        <p>Результат: <span id = "r27" class = "www"></span></p>
+		        <button onclick = "f27();">Выполнить</button>
+		    </div>
+		    
+		    <h1>На экранировку</h1>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка '<b>bbb /aaa\ bbb /ccc\</b>'. Напишите регулярку, которая найдет содержимое всех конструкций <b>/...\</b> и заменит их на '<b>!</b>'.
+		        </p>
+		        <p>Результат: <span id = "r28" class = "www"></span></p>
+		        <button onclick = "f28();">Выполнить</button>
+		    </div>
+		</div>
+	</body>
+</html>

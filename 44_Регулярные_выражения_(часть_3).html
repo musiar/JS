@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Регулярные выражения (3)</title>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style_2.css">
+		<script src ="js/script_common.js"></script>
+		<script src ="js/script_44.js"></script>
+	</head>
+
+	<body>
+		<div id ="main">
+		    <h1>На карманы при замене</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка 'aaa@bbb eee7@kkk'. Напишите регулярку, которая найдет строки по шаблону: любое количество букв и цифр, символ @, любое количество букв и цифр и поменяет местами то, что стоит до @ на то, что стоит после нее. Например, aaa@bbb должно превратиться в bbb@aaa.
+		        </p>
+		        <p>Результат: <span id = "r1" class = "www"></span></p>
+		        <button onclick = "f1();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка вида 'a1b2c3'. Напишите регулярку, которая найдет все цифры и удвоит их количество таким образом: 'a11b22c33' (то есть рядом с каждой цифрой напишет такую же).
+		        </p>
+		        
+		        <p>Результат: <span id = "r2" class = "www"></span></p>
+		        <button onclick = "f2();">Выполнить</button>
+		    </div>
+		    
+		    <h1>Задачи на test и match</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью метода test определите, что переданная строка является емэйлом. Примеры емэйлов для тестирования mymail@mail.ru, my.mail@mail.ru, my-mail@mail.ru, my_mail@mail.ru, mail@mail.com, mail@mail.by, mail@yandex.ru.
+		        </p>
+		        <input type = "text" maxlength = "50" id = "txt3">
+		        <button onclick = "f3();">Выполнить</button>
+		        <p>Результат: <span id = "r3" class = "www"></span></p>
+		        
+		    </div>
+		    
+		    
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка с текстом, в котором могут быть емейлы. С помощью match найдите все емэйлы в виде массива.
+		        </p>
+		        <input type = "text" id = "txt4">
+		        <button onclick = "f4();">Выполнить</button>
+		        <p>Результат: <span id = "r4" class = "www"></span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка является доменом. Примеры доменов: site.ru, site.com, my-site.com.
+		        </p>
+		        <input type = "text" id = "txt5">
+		        <button onclick = "f5();">Выполнить</button>
+		        <p>Результат: <span id = "r5" class = "www"></span></p>
+		        
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка является доменом. Примеры доменов: http://site.ru, http://site.com
+		        </p>
+		        <input type = "text" id = "txt6">
+		        <button onclick = "f6();">Выполнить</button>
+		        <p>Результат: <span id = "r6" class = "www"></span></p>
+		        
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка является доменом вида http://site.ru. Протокол может быть как http, так и https
+		        </p>
+		        <input type = "text" id = "txt7">
+		        <button onclick = "f7();">Выполнить</button>
+		        <p>Результат: <span id = "r7" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка начинается с http или с https.
+		        </p>
+		        <input type = "text" id = "txt8">
+		        <button onclick = "f8();">Выполнить</button>
+		        <p>Результат: <span id = "r8" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка заканчивается расширением txt, html или php.
+		        </p>
+		        <input type = "text" id = "txt9">
+		        <button onclick = "f9();">Выполнить</button>
+		        <p>Результат: <span id = "r9" class = "www"></span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test определите, что переданная строка заканчивается расширением jpg или jpeg.
+		        </p>
+		        <input type = "text" id = "txt10">
+		        <button onclick = "f10();">Выполнить</button>
+		        <p>Результат: <span id = "r10" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью test узнайте является ли строка числом, длиной до 12 цифр.
+		        </p>
+		        <input type = "text" id = "txt11">
+		        <button onclick = "f11();">Выполнить</button>
+		        <p>Результат: <span id = "r11" class = "www"></span></p>
+		    </div>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Дана строка с буквами, пробелами и цифрами. Найдите сумму всех чисел из данной строки.
+		        </p>
+		        <input type = "text" id = "txt12">
+		        <button onclick = "f12();">Выполнить</button>
+		        <p>Результат: <span id = "r12" class = "www"></span></p>
+		    </div>
+		    
+		    <h1>Задачи на replace</h1>
+		    
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью replace замените в строке домены вида http://site.ru, http://site.com на &lt;a href="http://site.ru">site.ru&lt;/a>.
+		        </p>
+		        <input type = "text" id = "txt13">
+		        <button onclick = "f13();">Выполнить</button>
+		        <p>Результат: <span id = "r13" class = "www"></span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            С помощью replace замените все повторяющиеся пробелы на один.
+		        </p>
+		        <input type = "text" id = "txt14">
+		        <button onclick = "f14();">Выполнить</button>
+		        <p>Результат: <span id = "r14" class = "www"></span></p>
+		    </div>
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Найдите и удалите все комментарии HTML.
+		        </p>
+		        <textarea id = "txt15" placeholder = "Введите текст HTML">
+<!-- Пример HTML -->
+<!-- тут будет жирный текст -->
+<b>Жирный текст</b>
+<!-- тут будет курсивный текст -->
+<i>Курсивный текст</i>
+<!-- Конец примера HTML -->
+		        </textarea>
+		        <br>
+		        <button onclick = "f15();">Выполнить</button>
+		    </div>
+
+
+		    <div class = "item">
+		        <p>
+		            <span class = "num"></span>
+		            Найдите и удалите все комментарии CSS.
+		        </p>
+		        <textarea id = "txt16" placeholder = "Введите текст CSS">
+/*стиль блоков*/
+div
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+/*стиль абзацев*/
+p
+	{
+		color: #57D906;
+}
+		        </textarea>
+		        <br>
+		        <button onclick = "f16();">Выполнить</button>
+		    </div>
+		</div>
+	</body>
+</html>
